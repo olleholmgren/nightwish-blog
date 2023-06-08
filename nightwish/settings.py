@@ -30,10 +30,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = [
-    '8000-olleholmgre-nightwishbl-cez8kwiaiac.ws-eu98.gitpod.io',
-    'nightwish-blog.herokuapp.com',
-]
+ALLOWED_HOSTS = ['nightwish.herokuapp.com', 'localhost']
 
 
 # Application definition
