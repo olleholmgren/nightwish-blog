@@ -1,1 +1,1 @@
-web: gunicorn nightwish-blog.wsgi
+web: gunicorn nightwish.wsgi
