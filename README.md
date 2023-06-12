@@ -14,14 +14,14 @@ This means that the user will be able to:
 ### Guest, Member and Admin
 
 #### Guest
-If the user does not sign up to the PLATFORM they will remain as a Guest.
+If the user does not sign up to the PLATFORM they will remain a Guest.
 The Guests of the PLATFORM will enjoy the following features:
 - View/read posts
 - Search posts
 
 #### Member
 If the user choose to sign up to the PLATFORM they will become a Member.
-The Members of the PLATFORM will enjoy the following features:
+The Members of the PLATFORM will enjoy the following features(new features not presented above are written in italics):
 - View/read posts
 - Search posts
 - Create posts
@@ -31,5 +31,14 @@ The Members of the PLATFORM will enjoy the following features:
 - Delete (their own) posts
 
 #### Admin (aka superuser)
-The Admin is the person "at the controls" who runs and maintains the site.
-The Admin is the
+The Admin is the person "at the controls" who runs and maintains the PLATFORM.
+If the Guest or Member grants the permission to run and maintain the PLATFORM they will become an Admin.
+The Members of the PLATFORM will enjoy the following features(new features not presented above are written in italics):
+- View/read posts
+- Search posts
+- Create posts
+- Like posts
+- Comment posts
+- Update (their own) posts
+- Delete (their own) posts
+- 
