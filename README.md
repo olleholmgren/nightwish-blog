@@ -53,10 +53,12 @@ So the User Strories for my project are as stated below.
 ### User Stories
 
 #### Guest
-As a Guest, I want to be able to read posts without signing up for the PLATFORM in order to save time and energy
+As a Guest, I want to be able to read posts without signing up for the PLATFORM in order to save time and energy.
+As a Guest, I want to be able to search for posts in order to see if there are any interesting posts that makes me want to sign up.
+As a Guest, I want to be able to sign up to the PLATFORM in order to enjoy all features of a member.
 
 #### Member
-As a Member, I want to be able to sign up to the PLATFORM in order to be able to create posts.
+As a Member, I want to be able to sign up to the PLATFORM in order to be able to create posts, like and comment posts.
 
 #### Admin
 As an Admin, I want to be able to verify the posts before they are visible at the PLATFORM, in order to avoid for example foul or abusive language or even harassment.
