@@ -25,7 +25,7 @@ The Members of the PLATFORM will enjoy the following features(new features not p
 - View/read posts
 - Search posts
 - ***Create posts***
-- ***Like (all) posts***
+- ***Like posts***
 - ***Comment (all) posts***
 - ***Update (their own) posts***
 - ***Delete (their own) posts***
@@ -39,6 +39,7 @@ The Members of the PLATFORM will enjoy the following features(new features not p
 - Create posts
 - Like posts
 - Comment posts
+- ***Verify posts***
 - ***Update (all) posts***
 - ***Delete (all) posts***
 
