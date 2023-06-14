@@ -50,15 +50,19 @@ I sort these Users in three different categories: Guests, Members and Admin.
 One important agile tool to use in the very beginning of a project is calles User Stories.
 So the User Strories for my project are as stated below.
 
-### User Stories
+### Design thinking and User Stories
+I order to approach this project in a Design Thinkng way, I have put myself in the User's perspective so that I can manage to sort out what the purpose of the PLATFORM will be.
+
+For the User Story part, I have referred to the very reliable source of Niel McEwens Common Agile Practices content from Code Institute.
 
 #### Guest
+
 As a Guest, I want to be able to read posts without signing up for the PLATFORM in order to save time and energy.
-As a Guest, I want to be able to search for posts in order to see if there are any interesting posts that makes me want to sign up.
-As a Guest, I want to be able to sign up to the PLATFORM in order to enjoy all features of a member.
+As a Guest, I want to be able to search for posts in order to find content that interests me.
+As a Guest, I want to be able to sign up to the PLATFORM in order to enjoy all features of a Member.
 
 #### Member
-As a Member, I want to be able to sign up to the PLATFORM in order to be able to create posts, like and comment posts.
+
 
 #### Admin
 As an Admin, I want to be able to verify the posts before they are visible at the PLATFORM, in order to avoid for example foul or abusive language or even harassment.
