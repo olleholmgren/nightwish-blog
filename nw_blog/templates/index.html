@@ -7,5 +7,15 @@
 </head>
 <body>
     <h1>TJENA FRÅN BLOGGEN</h1>
+<ul>
+{% for post in post_list %}
+    <li><a href="{% url 'post_view' post.pk %}">
+    {{ post.post_title }} |  
+    {{ post.post_author }}
+    {{ post.body }}
+    </li>
+{% endfor %}
+</ul>
+
 </body>
 </html>

@@ -15,6 +15,7 @@ STATUS = ((0, 'Draft'), (1, 'Published'))
 #Create Post model
 
 class Post(models.Model):
+    #post_id = models.IntegerField(primary_key=True)
     post_title = models.CharField(max_length=100, unique=True)
     post_author = models.ForeignKey(User, on_delete=models.CASCADE)
     slug = models.SlugField(max_length=200, unique=True)
@@ -22,7 +23,7 @@ class Post(models.Model):
     created_on = models.DateTimeField(auto_now_add=True)
     
     def __str__(self):
-        return f'{self.title} | {self.author}'
+        return f'{self.post_title} | {self.post_author}'
 
 class Comment(models.Model):
     comment_title = models.CharField(max_length=100, unique=False)
