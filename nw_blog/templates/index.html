@@ -12,7 +12,7 @@
     <li><a href="{% url 'post_view' post.pk %}">
     {{ post.post_title }} |  
     {{ post.post_author }}
-    {{ post.body }}
+    {{ post.created_on }}
     </li>
 {% endfor %}
 </ul>

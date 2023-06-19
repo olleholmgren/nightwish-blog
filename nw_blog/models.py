@@ -15,15 +15,17 @@ STATUS = ((0, 'Draft'), (1, 'Published'))
 #Create Post model
 
 class Post(models.Model):
-    #post_id = models.IntegerField(primary_key=True)
+    
     post_title = models.CharField(max_length=100, unique=True)
     post_author = models.ForeignKey(User, on_delete=models.CASCADE)
+    content = models.TextField(default='')
     slug = models.SlugField(max_length=200, unique=True)
     status = models.IntegerField(choices=STATUS, default=0)
     created_on = models.DateTimeField(auto_now_add=True)
     
     def __str__(self):
-        return f'{self.post_title} | {self.post_author}'
+        return f'{self.post_title} | {self.post_author} | {self.content}'
 
 class Comment(models.Model):
+
     comment_title = models.CharField(max_length=100, unique=False)

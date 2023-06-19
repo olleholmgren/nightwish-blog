@@ -9,12 +9,13 @@
     <h1>POST VIEW</h1>
     <h2>
         {{ post.post_title }}
+        {{ post.created_on }}
     </h2>
     <h4>
         {{ post.post_author }}
         <br>
         <br>
-        {{ post.body }}
+        {{ post.content | safe }}
     </h4>
     <a href="{% url 'index' %}">BACK</a>
 </body>
