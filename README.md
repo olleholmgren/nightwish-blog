@@ -47,7 +47,7 @@ The Members of the PLATFORM will enjoy the following features(new features not p
 In software and web development, it is very useful to adapt the Agile mindset when working on or starting up a project. 
 For this project, I have imagined and made up an imaginary group of people and they are called Users. 
 I sort these Users in three different categories: Guests, Members and Admin.
-One important agile tool to use in the very beginning of a project is calles User Stories.
+One important agile tool to use in the very beginning of a project is called User Stories.
 So the User Strories for my project are as stated below.
 
 ### Design thinking and User Stories
@@ -63,6 +63,11 @@ As a Guest, I want to be able to sign up to the PLATFORM in order to enjoy all f
 
 #### Member
 
+As a Member, I want to be able to Create posts so that I can share my thoughts and feelings to the world.
+As a Member, I want to be able to Read posts in order to be able to gain information about other peoples thoughts and feelings.
+As a Member, I want to be able to Update posts so that I can add any additional content of my choice.
+As a Member, I want to be able to Delete posts so that I can choose to not show a post that I do not like.
+As a Member, I want to be able to like posts in order to express my feelings about other peoples posts.
 
 #### Admin
 As an Admin, I want to be able to verify the posts before they are visible at the PLATFORM, in order to avoid for example foul or abusive language or even harassment.
