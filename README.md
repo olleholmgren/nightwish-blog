@@ -57,19 +57,19 @@ For the User Story part, I have referred to the very reliable source of Niel McE
 
 #### Guest
 
-As a Guest, I want to be able to read posts without signing up for the PLATFORM in order to save time and energy.
-As a Guest, I want to be able to search for posts in order to find content that interests me.
-As a Guest, I want to be able to sign up to the PLATFORM in order to enjoy all features of a Member.
+- As a Guest, I want to be able to read posts without signing up for the PLATFORM in order to save time and energy.
+- As a Guest, I want to be able to search for posts in order to find content that interests me.
+- As a Guest, I want to be able to sign up to the PLATFORM in order to enjoy all features of a Member.
 
 #### Member
 
-As a Member, I want to be able to Create posts so that I can share my thoughts and feelings to the world.
-As a Member, I want to be able to Read posts in order to be able to gain information about other peoples thoughts and feelings.
-As a Member, I want to be able to Update posts so that I can add any additional content of my choice.
-As a Member, I want to be able to Delete posts so that I can choose to not show a post that I do not like.
-As a Member, I want to be able to like posts in order to express my feelings about other peoples posts.
+- As a Member, I want to be able to Create posts so that I can share my thoughts and feelings to the world.
+- As a Member, I want to be able to Read posts in order to be able to gain information about other peoples thoughts and feelings.
+- As a Member, I want to be able to Update posts so that I can add any additional content of my choice.
+- As a Member, I want to be able to Delete posts so that I can choose to not show a post that I do not like.
+- As a Member, I want to be able to like posts in order to express my feelings about other peoples posts.
 
 #### Admin
-As an Admin, I want to be able to verify the posts before they are visible at the PLATFORM, in order to avoid for example foul or abusive language or even harassment.
+- As an Admin, I want to be able to verify the posts before they are visible at the PLATFORM, in order to avoid for example foul or abusive language or even harassment.
 
 
