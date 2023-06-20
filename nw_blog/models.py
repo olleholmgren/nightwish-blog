@@ -1,6 +1,7 @@
 from django.db import models
 from django.contrib.auth.models import User
 from cloudinary.models import CloudinaryField
+from django.urls import reverse
 
 STATUS = ((0, 'Draft'), (1, 'Published'))
 
@@ -41,4 +42,7 @@ class Comment(models.Model):
         ordering = ['created_on']
 
     def __str__(self):
-        return f'Comment by {self.post_author} on {self.post_title} at {self.created_on}'
+        return f'Comment by {self.post_author} on {self.post_title}'
+    
+    def get_absolute_url(self):
+        return reverse('post_view', args=(str(self.id)))

@@ -12,6 +12,12 @@
 
 <h1>Create blog post</h1>
 
+<form method="POST">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button>Post</button>
+
+</form>
 
 {% endblock %}
 
