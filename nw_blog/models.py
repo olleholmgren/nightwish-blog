@@ -3,17 +3,12 @@ from django.contrib.auth.models import User
 from cloudinary.models import CloudinaryField
 from django.urls import reverse
 
-STATUS = ((0, 'Draft'), (1, 'Published'))
+STATUS = (
+    (0, 'Draft'), 
+    (1, 'Published')
+)
 
 
-# Create Member model
-# class Member:
-#     member_id =
-#     member_name = CharField
-
-
-
-#Create Post model
 
 class Post(models.Model):
     
