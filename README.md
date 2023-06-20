@@ -43,6 +43,12 @@ The Members of the PLATFORM will enjoy the following features(new features not p
 - ***Update (all) posts***
 - ***Delete (all) posts***
 
+## Use Case Diagram
+![UCD](https://github.com/olleholmgren/nightwish-blog/assets/114229598/f24f5b27-b4c4-44ea-a8a4-75b32bafc31a)
+
+## Entity Relationship Diagram
+![ERD](https://github.com/olleholmgren/nightwish-blog/assets/114229598/6b0f5ca1-b78a-4f5f-afdf-377fdc9823a7)
+
 ## Agile
 In software and web development, it is very useful to adapt the Agile mindset when working on or starting up a project. 
 For this project, I have imagined and made up an imaginary group of people and they are called Users. 
