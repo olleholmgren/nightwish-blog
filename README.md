@@ -43,6 +43,11 @@ The Members of the PLATFORM will enjoy the following features(new features not p
 - ***Update (all) posts***
 - ***Delete (all) posts***
 
+## Project Journey
+
+While staring up my blog project, I wanted to have a clear overview of what features and functions I need my PLATFORM in order to have a fully functional PLATFORM.	
+After discussing with my fellow classmates at Code Institute it came to my understanding that it is a very good idea to start with a sketch or flowchart. So I started to create the Use Case Diagram as visible below:	
+
 ## Use Case Diagram
 ![UCD](https://github.com/olleholmgren/nightwish-blog/assets/114229598/f24f5b27-b4c4-44ea-a8a4-75b32bafc31a)
 
