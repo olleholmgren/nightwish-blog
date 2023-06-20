@@ -6,6 +6,10 @@
     <title>Document</title>
 </head>
 <body>
+{% extends 'base.html' %}
+
+{% block content %}
+
     <h1>TJENA FRÅN BLOGGEN</h1>
 <ul>
 {% for post in post_list %}
@@ -16,6 +20,8 @@
     </li>
 {% endfor %}
 </ul>
+
+{% endblock %}
 
 </body>
 </html>

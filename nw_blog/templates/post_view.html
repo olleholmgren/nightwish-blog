@@ -6,17 +6,27 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>POST VIEW</h1>
+    {% extends 'base.html' %}
+
+    {% block content %}
+
     <h2>
         {{ post.post_title }}
-        {{ post.created_on }}
+    <br>
     </h2>
-    <h4>
+    <h5>
         {{ post.post_author }}
-        <br>
-        <br>
+    </h5>
+    <h5>
+        {{ post.created_on }}
+    <br>
+    <br>
+    </h5>
+    <div>
         {{ post.content | safe }}
-    </h4>
+    </div>
+    {% endblock %}
+
     <a href="{% url 'index' %}">BACK</a>
 </body>
 </html>
