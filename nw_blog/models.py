@@ -26,6 +26,19 @@ class Post(models.Model):
     def __str__(self):
         return f'{self.post_title} | {self.post_author} | {self.content}'
 
+    class Meta:
+        ordering = ['-created_on']
+
+
 class Comment(models.Model):
 
-    comment_title = models.CharField(max_length=100, unique=False)
+    post_title = models.ForeignKey(Post, on_delete=models.CASCADE)
+    post_author = models.ForeignKey(User, on_delete=models.CASCADE)
+    content = models.TextField(default='')
+    created_on = models.DateTimeField(auto_now_add=True)
+
+    class Meta:
+        ordering = ['created_on']
+
+    def __str__(self):
+        return f'Comment by {self.post_author} on {self.post_title} at {self.created_on}'
