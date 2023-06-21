@@ -1,20 +1,18 @@
 from django.db import models
 from django.contrib.auth.models import User
 from cloudinary.models import CloudinaryField
-from django.urls import reverse
+# from django.urls import reverse
 
 STATUS = (
     (0, 'Draft'), 
     (1, 'Published')
 )
 
-
-
 class Post(models.Model):
     
     post_title = models.CharField(max_length=100, unique=True)
     post_author = models.ForeignKey(User, on_delete=models.CASCADE)
-    content = models.TextField(default='')
+    content = models.TextField()
     slug = models.SlugField(max_length=200, unique=True)
     status = models.IntegerField(choices=STATUS, default=0)
     created_on = models.DateTimeField(auto_now_add=True)
@@ -30,7 +28,7 @@ class Comment(models.Model):
 
     post_title = models.ForeignKey(Post, on_delete=models.CASCADE)
     post_author = models.ForeignKey(User, on_delete=models.CASCADE)
-    content = models.TextField(default='')
+    content = models.TextField()
     created_on = models.DateTimeField(auto_now_add=True)
 
     class Meta:
@@ -39,5 +37,5 @@ class Comment(models.Model):
     def __str__(self):
         return f'Comment by {self.post_author} on {self.post_title}'
     
-    def get_absolute_url(self):
-        return reverse('post_view', args=(str(self.id)))
+    # def get_absolute_url(self):
+    #      return reverse('post_view', args=(str(self.id)))
