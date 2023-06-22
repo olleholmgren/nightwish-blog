@@ -24,9 +24,15 @@
     </h5>
     <div>
         {{ post.content | safe }}
+        
+        
     </div>
+    <div>
+        <a href="{% url 'index' %}">BACK</a>
+    </div>
+    
     {% endblock %}
 
-    <a href="{% url 'index' %}">BACK</a>
+    
 </body>
 </html>
