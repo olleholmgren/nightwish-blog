@@ -7,15 +7,23 @@
     <p class="lead">Fall in love with your deep dark sin</p>
     <p class="lead-small">This is a blog about the great Finnish symphonic metal band Nightwish</p>
     <a href="{% url 'account_signup' %}" class="btn btn-danger">Become a member and join our gathering</a>
-    <ul>
-    {% for post in post_list %}
-    <li><a href="{% url 'post_view' post.pk %}">
-            {{ post.post_title }} |  
-            {{ post.post_author }}
-            {{ post.created_on }}
-    </li>
+    
+    <div>
+        <div class="container-fluid">
+            <div class="row">
+
+                <!-- Blog posts grid -->
+                <div class="col-10 mt-3 left">
+                    <div class="row">
+                        {% for post in post_list %}
+                    </div>
+                </div>
+            </div>
+        </div>
     {% endfor %}
-    </ul>
+    </ul> 
+    </div>
+
 </div>
 
 
