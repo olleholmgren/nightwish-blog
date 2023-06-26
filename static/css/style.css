@@ -5,6 +5,11 @@ body {
   font-family: "Arial", sans-serif;
 }
 
+
+.navbar-nav .nav-link {
+  color: #fff;
+}
+
 .jumbotron {
   background-size: cover;
   text-align: center;

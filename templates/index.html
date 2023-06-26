@@ -2,6 +2,12 @@
 
 {% block content %}
 
+<div class="jumbotron">
+    <h1>Welcome to the NIGHTWISH Platform</h1>
+    <p class="lead">Fall in love with your deep dark sin</p>
+    <a href="{% url 'account_signup' %}" class="btn btn-danger">Become a member and join our gathering</a>
+  </div>
+
 <ul>
 {% for post in post_list %}
     <li><a href="{% url 'post_view' post.pk %}">
