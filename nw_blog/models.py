@@ -1,6 +1,6 @@
 from django.db import models
 from django.contrib.auth.models import User
-# from django.urls import reverse
+from django.urls import reverse
 
 STATUS = (
     (0, 'Draft'), 
@@ -26,6 +26,9 @@ class Post(models.Model):
 
     def likes_count(self):
         return self.likes.count()
+
+    def get_absolute_url(self):
+        return reverse('post_view', args=[str(self.id)])
 
 class Comment(models.Model):
 
