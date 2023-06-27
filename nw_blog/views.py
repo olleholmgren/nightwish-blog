@@ -2,7 +2,7 @@ from django.shortcuts import render
 from django.views import generic, View
 from django.http import HttpResponseRedirect
 from .models import Post
-from .forms import CommentForm #tre:tjugi på snutt
+from .forms import CommentForm
 
 
 
@@ -51,6 +51,7 @@ class PostDetailView(View):
             liked = True
 
         comment_form = CommentForm(data=request.POST)
+        
         if comment_form.is_valid():
             comment_form.instance.email = request.user.email
             comment_form.instance.name = request.user.username

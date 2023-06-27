@@ -1,15 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Post View</title>
-</head>
-<body>
-    {% extends 'base.html' %}
+{% extends 'base.html' %}
 
-    {% block content %}
+{% block content %}
 
+{% load crispy_forms_tags%}
     <h2>
         {{ post.post_title }}
     <br>
@@ -30,8 +23,24 @@
     <div>
         <a href="{% url 'index' %}">BACK</a>
     </div>
-    
-    {% endblock %}
+   
+    {% if commented %}
+    <div class="alert alert-success" role="alert">
+        Your comment is awaiting verification
+    </div>
+    {% else %}
+    {% if user.is_authenticated %}
+    <h3>Leave a comment:</h3>
+    <p>Posting as: {{ user.username }}</p>
+    <form method="post" style="margin-top: 1.3em;">
+        {{ comment_form | crispy }}
+        {% csrf_token %}
+        <button type="submit" class="btn btn-signup btn-lg">Submit</button>
+    </form>
+    {% endif %}
+    {% endif %}
+
+{% endblock %}
 
     
 </body>
