@@ -1,10 +1,8 @@
-from django.shortcuts import render
+from django.shortcuts import render, get_object_or_404, reverse
 from django.views import generic, View
 from django.http import HttpResponseRedirect
 from .models import Post, FavouriteAlbum
 from .forms import CommentForm
-
-
 
 class IndexView(generic.ListView):
     
@@ -83,5 +81,3 @@ class PostLike(View):
             post.likes.add(request.user)
 
         return HttpResponseRedirect(reverse('post_view', args=[slug]))
-
- 
