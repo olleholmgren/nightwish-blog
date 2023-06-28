@@ -9,7 +9,7 @@ The aim for this project is to create a PLATFORM for NIGHTWISH fans to gather an
 As an owner, my goal is to be able to run and maintain a PLATFORM that will use the CRUD(Create, Read, Update, Delete) functionality in order to serve dedicated fans of NIGHTWISH. The user will have the choice of either sign up as a Member to the PLATFORM or to just remain a Guest
 This means that the user will be able to: 
 
-## Features
+## Existing Features
 
 ### Guest, Member and Admin
 
@@ -68,6 +68,24 @@ For this ERD I used [Lucid Chart](https://www.lucidchart.com/) in order to struc
 # UI/UX
 I wanted to build a clean and neat blog/forum which is very easy to use. There are no surprises or misguiding attributes. The main focus is to meet the user's expectations of what a blog should look like.
 
+## The 5 'S' Planes of User Experience(UX)
+
+### Strategy
+Focuses on fulfilling user needs and product objectives. In this particular project, the emphasis was on deviating from the common functionalities found on other websites, such as social media interactions, discussions, and excessive visual content. The primary goal was to create a serene and creative space. The content available for browsing was deliberately kept at a simplistic level.
+
+### Scope
+Determines the project's functional boundaries and included features. Minimal functionality was considered essential for this project, meaning that most features were considered basic requirements. Features like user sign up and login were necessary, along with fundamental CRUD functionality for authenticated users. More comprehensive explanations of all the current features can be found in the Existing Features section. Future features, discussed in the Future Features section, were considered unnecessary at the present moment, although they remained within the project's potential scope.
+
+### Structure
+Defines how users can navigate the site and utilize all the existing features. The site's structure was modeled after a basic blog site, which is a commonly used template. This structure enables users to visit the site, browse posts from fans and share thoughts on favourite albums.
+However, in order to contribute to the site in any capacity, user authentication is required, which necessitates creating an account.
+
+### Skeleton
+Translates the features outlined in the structure into navigational elements. For an initial overview of the project's skeleton. To ensure an intuitive navigation experience, both the navbar and the main content adhere to a standard layout pattern that most users would find familiar. The navbar provides links to the main features and functions of the site, with variations depending on whether the user is authenticated or not. On smaller to medium screen sizes, a drop-down 'burger' menu replaces the full navigation bar. Buttons and links are appropriately labeled, and clear and simple instructions on how to use the page can be found in relevant sections. The footer includes social media links, which are currently serving as placeholders, completing the overall layout of the site.
+
+### Surface
+Addresses visual design and the means of conveying desired emotions and achieving desired effects.
+
 ## Agile
 In software and web development, it is very useful to adapt the Agile mindset when working on or starting up a project. 
 For this project, I have imagined and made up an imaginary group of people and they are called Users. 
@@ -80,7 +98,7 @@ I order to approach this project in a Design Thinkng way, I have put myself in t
 
 For the User Story part, I have referred to the very reliable source of Niel McEwens Common Agile Practices content from Code Institute.
 
-
+## Future Features
 
 #### Guest
 
