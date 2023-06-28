@@ -13,10 +13,10 @@ class IndexView(generic.ListView):
     template_name = 'index.html'
     paginate_by = 8
 
-class CreatePostView(generic.CreateView):
+class FavouriteAlbumView(generic.CreateView):
     
     model = Post
-    template_name = 'create_post.html'
+    template_name = 'favourite_album.html'
     fields = ['post_title', 'content']    
 
 class PostDetailView(View):
