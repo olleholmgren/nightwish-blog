@@ -49,10 +49,24 @@ While staring up my blog project, I wanted to have a clear overview of what feat
 After discussing with my fellow classmates at Code Institute it came to my understanding that it is a very good idea to start with a sketch or flowchart. So I started to create the Use Case Diagram as visible below:	
 
 ## Use Case Diagram
+
+I made this Use Case Diagram mostly in order to get the broader picture of what the actual product will have in terms of features for the:
+- Admin
+- Member
+- Guest
+
 ![UCD](https://github.com/olleholmgren/nightwish-blog/assets/114229598/f24f5b27-b4c4-44ea-a8a4-75b32bafc31a)
 
 ## Entity Relationship Diagram
+
+For this ERD I used [Lucid Chart](https://www.lucidchart.com/) in order to structure up my database schema.
+
 ![ERD](https://github.com/olleholmgren/nightwish-blog/assets/114229598/6b0f5ca1-b78a-4f5f-afdf-377fdc9823a7)
+
+## Wireframe
+
+# UI/UX
+I wanted to build a clean and neat blog/forum which is very easy to use. There are no surprises or misguiding attributes. The main focus is to meet the user's expectations of what a blog should look like.
 
 ## Agile
 In software and web development, it is very useful to adapt the Agile mindset when working on or starting up a project. 
@@ -65,6 +79,8 @@ So the User Strories for my project are as stated below.
 I order to approach this project in a Design Thinkng way, I have put myself in the User's perspective so that I can manage to sort out what the purpose of the PLATFORM will be.
 
 For the User Story part, I have referred to the very reliable source of Niel McEwens Common Agile Practices content from Code Institute.
+
+
 
 #### Guest
 
