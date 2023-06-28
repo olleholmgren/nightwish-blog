@@ -1,7 +1,7 @@
 from django.shortcuts import render
 from django.views import generic, View
 from django.http import HttpResponseRedirect
-from .models import Post
+from .models import Post, FavouriteAlbum
 from .forms import CommentForm
 
 
@@ -15,9 +15,9 @@ class IndexView(generic.ListView):
 
 class FavouriteAlbumView(generic.CreateView):
     
-    model = Post
+    model = FavouriteAlbum
     template_name = 'favourite_album.html'
-    fields = ['post_title', 'content']    
+    fields = ['album_title', 'review']
 
 class PostDetailView(View):
 

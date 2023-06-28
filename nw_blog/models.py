@@ -44,7 +44,7 @@ class Comment(models.Model):
     def __str__(self):
         return f'Comment by {self.post_author} on {self.post_title}'
 
-class PickFavoriteAlbum(models.Model):
+class FavouriteAlbum(models.Model):
 
     member = models.ForeignKey(User, on_delete=models.CASCADE)
     album_title = models.TextField()
