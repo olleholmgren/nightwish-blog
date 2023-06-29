@@ -30,13 +30,16 @@ body {
 }
 
 .block-content {
-  text-align: center;
-}
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 
 .block-content-center {
-  justify-content: center;
-  text-align: center;
+  text-align: left;
 }
+
+
 
 .jumbotron {
   background-size: cover;
