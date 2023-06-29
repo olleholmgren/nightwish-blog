@@ -2,12 +2,12 @@
 
 {% block content %}
 
-<h1>Choose your favourite Album</h1>
+<h3>Choose your favourite Album</h3>
 
 <form method="POST">
     {% csrf_token %}
     {{ form.as_p }}
-<button>Post</button>
+<button class="btn">Post</button>
 
 </form>
 
