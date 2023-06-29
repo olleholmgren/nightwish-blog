@@ -28,20 +28,37 @@
           </button>
           <div class="collapse navbar-collapse" id="navbarResponsive">
               <ul class="navbar-nav ms-auto py-4 py-lg-0">
-                  <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4 text-light" href="{% url 'index' %}">Home</a></li>
-                  <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4 text-light" href="{% url 'favourite_album' %}">Favourite Album</a></li>
-                  <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4 text-light" href="{% url 'account_signup' %}">Sign Up</a></li>
-                  <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4 text-light" href="{% url 'account_login' %}">Log In</a></li>
+                  <li class="nav-item">
+                    <a class="nav-link px-lg-3 py-3 py-lg-4 text-light" href="{% url 'index' %}">Home</a></li>
+
+                  {% if user.is_authenticated %}
+
+                  <li class="nav-item">
+                    <a class="nav-link px-lg-3 py-3 py-lg-4 text-light" href="{% url 'favourite_album' %}">Favourite Album</a></li>
+                  <li class="nav-item">
+                    <a class="nav-link px-lg-3 py-3 py-lg-4 text-light" href="{% url 'account_logout' %}">Log Out</a></li>
+                  
+                  {% else %}
+
+                  <li class="nav-item">
+                    <a class="nav-link px-lg-3 py-3 py-lg-4 text-light" href="{% url 'account_signup' %}">Sign Up</a></li>
+                  <li class="nav-item">
+                    <a class="nav-link px-lg-3 py-3 py-lg-4 text-light" href="{% url 'account_login' %}">Log In</a></li>
+
+                  {% endif %}
+                  
               </ul>
           </div>
       </div>
   </nav>
-<div class="container position-center">
+<div class="container">
+    <div class="block-content">
+        <div class="block-content-center">
+            {% block content %}
 
-
-{% block content %}
-
-{% endblock %}
+            {% endblock %}
+        </div>
+    </div>
 </div>
 <footer>
   <div class="container px-4 px-lg-5">

@@ -28,7 +28,16 @@ body {
   max-width: 400px;
   margin: 0 auto;
 }
-  
+
+.block-content {
+  text-align: center;
+}
+
+.block-content-center {
+  justify-content: center;
+  text-align: center;
+}
+
 .jumbotron {
   background-size: cover;
   text-align: center;
