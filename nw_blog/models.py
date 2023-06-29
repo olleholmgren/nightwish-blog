@@ -42,7 +42,7 @@ class Comment(models.Model):
         ordering = ['created_on']
 
     def __str__(self):
-        return f'Comment {self.content} on {self.member}'
+        return f'Comment {self.content} by {self.member}'
 
 class FavouriteAlbum(models.Model):
 
@@ -51,5 +51,8 @@ class FavouriteAlbum(models.Model):
     review = models.TextField()
     created_on = models.DateTimeField(auto_now_add=True)
 
+    class Meta:
+        ordering = ['created_on']
+
     def __str__(self):
-        return self.album_title
+        return f'Album {self.album_title} by {self.member}'

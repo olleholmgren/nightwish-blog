@@ -9,8 +9,15 @@
             <div class="col-md-10 col-lg-8 col-xl-7">
                 <div class="site-heading">
                     <h1>WELCOME TO THE NIGHTWISH PLATFORM</h1>
-                    <span class="subheading">Here you can share your thoughts and feelings of the great Finnish symphonic metal band Nightwish</span>
+                        <span class="subheading">Here you can share your thoughts and feelings of the great Finnish symphonic metal band Nightwish</span>
                 </div>
+                    <div class="block-content center">                        
+                        {% if user.is_authenticated %}
+                        <br><br><br><br><br><br>
+                        <button class="btn" href="{% url 'favourite_album' %}">Pick your favourite album</button>
+                        {% else %}
+                        {% endif %}
+                    </div>
             </div>
         </div>
     </div>
