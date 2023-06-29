@@ -10,7 +10,7 @@ STATUS = (
 class Post(models.Model):
     
     post_title = models.CharField(max_length=100, unique=True)
-    member = models.ForeignKey(User, on_delete=models.CASCADE)
+    member = models.ForeignKey(User, on_delete=models.CASCADE, related_name='blog_posts')
     excerpt = models.TextField(blank=True)
     content = models.TextField()
     status = models.IntegerField(choices=STATUS, default=0)
@@ -22,7 +22,7 @@ class Post(models.Model):
         ordering = ['-created_on']
     
     def __str__(self):
-        return f'{self.post_title} | {self.member} | {self.content}'
+        return self.post_title
 
     def likes_count(self):
         return self.likes.count()
@@ -42,7 +42,7 @@ class Comment(models.Model):
         ordering = ['created_on']
 
     def __str__(self):
-        return f'Comment by {self.member} on {self.post_title}'
+        return f'Comment {self.content} on {self.member}'
 
 class FavouriteAlbum(models.Model):
 
@@ -52,4 +52,4 @@ class FavouriteAlbum(models.Model):
     created_on = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):
-        return self.album_name
+        return self.album_title
