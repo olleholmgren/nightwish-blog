@@ -35,11 +35,9 @@ body {
     align-items: center;
   }
 
-.block-content-center {
+.block-content-left {
   text-align: left;
 }
-
-
 
 .jumbotron {
   background-size: cover;
