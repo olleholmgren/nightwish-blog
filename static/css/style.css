@@ -107,6 +107,11 @@ h1 {
   text-align: right;
 }
 
+#signup_form, 
+.login {
+  text-align: left;
+}
+
 @media (min-width: 768px) {
   .bd-placeholder-img-lg {
     font-size: 3.5rem;
