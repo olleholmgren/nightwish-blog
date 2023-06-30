@@ -1,5 +1,7 @@
 # THE NIGHTWISH PLATFORM #
 
+MOCKUP
+
 An online interactive fanzine for dedicated fans of the great symphonic metal band
 
 ## Purpose
@@ -17,16 +19,12 @@ This means that the user will be able to:
 If the user does not sign up to the PLATFORM they will remain a Guest.
 The Guests of the PLATFORM will enjoy the following features:
 - View/read posts
-- Search posts
 
 #### Member(User)
 If the user choose to sign up to the PLATFORM they will become a Member.
 The Members of the PLATFORM will enjoy the following features(new features not presented above are written in bold italics):
 - View/read posts
-- Search posts
 - ***Create posts***
-- ***Like posts***
-- ***Comment (all) posts***
 - ***Update (their own) posts***
 - ***Delete (their own) posts***
 
@@ -100,6 +98,59 @@ For the User Story part, I have referred to the very reliable source of Niel McE
 
 ## Future Features
 
+### Guest, Member and Admin
+
+#### Guest(User)
+If the user does not sign up to the PLATFORM they will remain a Guest.
+The Guests of the PLATFORM will enjoy the following features:
+- View/read posts
+- Search posts
+
+#### Member(User)
+If the user choose to sign up to the PLATFORM they will become a Member.
+The Members of the PLATFORM will enjoy the following features(new features not presented above are written in bold italics):
+- View/read posts
+- Search posts
+- ***Create posts***
+- ***Like posts***
+- ***Comment (all) posts***
+- ***Update (their own) posts***
+- ***Delete (their own) posts***
+
+#### Admin (Owner)
+The Admin is the person "at the controls" who runs and maintains the PLATFORM.
+If the Guest or Member grants the permission to run and maintain the PLATFORM they will become an Admin.
+The Members of the PLATFORM will enjoy the following features(new features not presented above are written in bold italics):
+- View/read posts
+- Search posts
+- Create posts
+- Like posts
+- Comment posts
+- ***Verify posts***
+- ***Update (all) posts***
+- ***Delete (all) posts***
+
+## Project Journey
+
+While staring up my blog project, I wanted to have a clear overview of what features and functions I need my PLATFORM in order to have a fully functional PLATFORM.	
+After discussing with my fellow classmates at Code Institute it came to my understanding that it is a very good idea to start with a sketch or flowchart. So I started to create the Use Case Diagram as visible below:	
+
+## Use Case Diagram
+
+I made this Use Case Diagram mostly in order to get the broader picture of what the actual product will have in terms of features for the:
+- Admin
+- Member
+- Guest
+
+![UCD](https://github.com/olleholmgren/nightwish-blog/assets/114229598/f24f5b27-b4c4-44ea-a8a4-75b32bafc31a)
+
+## Entity Relationship Diagram
+
+For this ERD I used [Lucid Chart](https://www.lucidchart.com/) in order to structure up my database schema.
+
+![ERD](https://github.com/olleholmgren/nightwish-blog/assets/114229598/6b0f5ca1-b78a-4f5f-afdf-377fdc9823a7)
+
+
 #### Guest
 
 - As a Guest, I want to be able to read posts without signing up for the PLATFORM in order to save time and energy.
@@ -117,4 +168,23 @@ For the User Story part, I have referred to the very reliable source of Niel McE
 #### Admin
 - As an Admin, I want to be able to verify the posts before they are visible at the PLATFORM, in order to avoid for example foul or abusive language or even harassment.
 
+## Languages and technologies
+- HTML: Used for structuring all the templates on the site.
+- CSS: Utilized to provide additional styling to the site.
+- JavaScript: Used to be able to collapse the nav bar whilst using on smaller screens.
+- Bootstrap: Utilized to style the website, ensuring responsiveness and interactivity.
+- Python: Implemented to deliver functionality to the site. All written code in the class-based models, views, admin, forms etc are written in Python.
+- Django: Utilized as the backend logic framework for the project, enabling rapid and secure development.
+- Django Packages:
+    - Summernote: Utilized as a text editor.
+    - Allauth: Employed for authentication, registration, and account management.
+    - Crispy Forms: Used for styling forms.
 
+- Git: Used for version control, with the Gitpod terminal being utilized to commit changes to Git and push them to GitHub.
+- GitHub: Employed to store the project's code after pushing it from the workspace.
+- Heroku: Utilized for deploying the live project.
+- PostgreSQL: Database that is used through Heroku.
+- Lucid Chart: Used to create diagrams and use case for the project.
+- Chrome Developer Tools: Utilized for inspecting page elements, debugging and troubleshooting.The Lighthouse extension installed in the Chrome Browser was used to generate the performance report.
+- Google Fonts
+- Font Awesome
