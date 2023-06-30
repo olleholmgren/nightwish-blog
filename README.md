@@ -1,6 +1,6 @@
 # THE NIGHTWISH PLATFORM #
 
-MOCKUP
+![MOCKUP](/static/images/mockup.png)
 
 An online interactive fanzine for dedicated fans of the great symphonic metal band
 
@@ -96,6 +96,27 @@ I order to approach this project in a Design Thinkng way, I have put myself in t
 
 For the User Story part, I have referred to the very reliable source of Niel McEwens Common Agile Practices content from Code Institute.
 
+### User Stories
+
+#### Guest
+
+- As a Guest, I want to be able to read posts without signing up for the PLATFORM in order to save time and energy.
+- As a Guest, I want to be able to search for posts in order to find content that interests me.
+- As a Guest, I want to be able to sign up to the PLATFORM in order to enjoy all features of a Member.
+
+#### Member
+
+- As a Member, I want to be able to Create posts so that I can share my thoughts and feelings to the world.
+- As a Member, I want to be able to Read posts in order to be able to gain information about other peoples thoughts and feelings.
+- As a Member, I want to be able to Update posts so that I can add any additional content of my choice.
+- As a Member, I want to be able to Delete posts so that I can choose to not show a post that I do not like.
+- As a Member, I want to be able to like posts in order to express my feelings about other peoples posts.
+
+#### Admin
+- As an Admin, I want to be able to verify the posts before they are visible at the PLATFORM, in order to avoid for example foul or abusive language or even harassment.
+
+
+
 ## Future Features
 
 ### Guest, Member and Admin
@@ -142,31 +163,9 @@ I made this Use Case Diagram mostly in order to get the broader picture of what 
 - Member
 - Guest
 
-![UCD](https://github.com/olleholmgren/nightwish-blog/assets/114229598/f24f5b27-b4c4-44ea-a8a4-75b32bafc31a)
 
 ## Entity Relationship Diagram
 
-For this ERD I used [Lucid Chart](https://www.lucidchart.com/) in order to structure up my database schema.
-
-![ERD](https://github.com/olleholmgren/nightwish-blog/assets/114229598/6b0f5ca1-b78a-4f5f-afdf-377fdc9823a7)
-
-
-#### Guest
-
-- As a Guest, I want to be able to read posts without signing up for the PLATFORM in order to save time and energy.
-- As a Guest, I want to be able to search for posts in order to find content that interests me.
-- As a Guest, I want to be able to sign up to the PLATFORM in order to enjoy all features of a Member.
-
-#### Member
-
-- As a Member, I want to be able to Create posts so that I can share my thoughts and feelings to the world.
-- As a Member, I want to be able to Read posts in order to be able to gain information about other peoples thoughts and feelings.
-- As a Member, I want to be able to Update posts so that I can add any additional content of my choice.
-- As a Member, I want to be able to Delete posts so that I can choose to not show a post that I do not like.
-- As a Member, I want to be able to like posts in order to express my feelings about other peoples posts.
-
-#### Admin
-- As an Admin, I want to be able to verify the posts before they are visible at the PLATFORM, in order to avoid for example foul or abusive language or even harassment.
 
 ## Languages and technologies
 - HTML: Used for structuring all the templates on the site.
