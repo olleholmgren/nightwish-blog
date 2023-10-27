@@ -1,10 +1,12 @@
 from .models import Comment, FavouriteAlbum
 from django import forms
 
+
 class CommentForm(forms.ModelForm):
     class Meta:
         model = Comment
         fields = ('content',)
+
 
 class FavouriteAlbumForm(forms.ModelForm):
     def __init__(self, *args, **kwargs):
