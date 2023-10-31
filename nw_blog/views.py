@@ -4,18 +4,21 @@ from django.http import HttpResponseRedirect
 from .models import Post, FavouriteAlbum
 from .forms import CommentForm
 
+
 class IndexView(generic.ListView):
-    
+
     model = Post
     queryset = Post.objects.filter(status=1).order_by('-created_on')
     template_name = 'index.html'
     paginate_by = 8
 
+
 class FavouriteAlbumView(generic.CreateView):
-    
+
     model = FavouriteAlbum
     template_name = 'favourite_album.html'
     fields = ['album_title', 'review']
+
 
 class PostDetailView(View):
 
@@ -38,7 +41,7 @@ class PostDetailView(View):
                 "comment_form": CommentForm()
             },
         )
-    
+
     def post(self, request, slug, *args, **kwargs):
 
         queryset = Post.objects.filter(status=1)
@@ -49,7 +52,7 @@ class PostDetailView(View):
             liked = True
 
         comment_form = CommentForm(data=request.POST)
-        
+
         if comment_form.is_valid():
             comment_form.instance.email = request.user.email
             comment_form.instance.name = request.user.username
@@ -71,8 +74,9 @@ class PostDetailView(View):
             },
         )
 
+
 class PostLike(View):
-    
+
     def post(self, request, slug, *args, **kwargs):
         post = get_object_or_404(Post, slug=slug)
         if post.likes.filter(id=request.user.id).exists():
