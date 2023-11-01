@@ -49,7 +49,7 @@ class Comment(models.Model):
 
 class FavouriteAlbum(models.Model):
 
-    member = models.ForeignKey(User, on_delete=models.CASCADE)
+    name = models.ForeignKey(User, on_delete=models.CASCADE)
     album_title = models.CharField(max_length=80)
     review = models.TextField()
     created_on = models.DateTimeField(auto_now_add=True)
@@ -58,4 +58,4 @@ class FavouriteAlbum(models.Model):
         ordering = ['created_on']
 
     def __str__(self):
-        return f'Album {self.album_title} by {self.member}'
+        return f'Album {self.album_title} by {self.name}'
