@@ -12,7 +12,18 @@
     {% csrf_token %}
     {{ form.as_p }}
 <button class="btn">Post</button>
-{% endif %}
+{% else %}
+<div>
+    <h3>
+        <br>
+        <br>
+        <br>
+        This page is empty unless you 
+        <a href="{% url 'account_signup' %}">SIGN UP</a> as a member or/and 
+        <a href="{% url 'account_login' %}">LOG IN</a>
+    </h3>
+</div>
+    {% endif %}
 </form>
 
 {% endblock %}
