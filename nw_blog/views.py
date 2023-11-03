@@ -17,7 +17,7 @@ class FavouriteAlbumView(generic.CreateView):
 
     model = FavouriteAlbum
     template_name = 'favourite_album.html'
-    fields = ['album_title', 'review']
+    fields = ['album_title', 'review',]
 
 
 class PostDetailView(View):
