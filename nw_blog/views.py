@@ -5,6 +5,11 @@ from .models import Post, FavouriteAlbum
 from .forms import CommentForm
 
 
+class IndexView(generic.ListView):
+
+    template_name = 'index.html'
+    queryset = Post.objects.filter(status=1).order_by('-created_on')
+
 class ConcertMemoriesView(generic.ListView):
 
     model = Post
