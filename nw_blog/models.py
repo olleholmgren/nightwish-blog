@@ -54,15 +54,15 @@ class FavouriteAlbum(models.Model):
 
     class AlbumChoices(models.TextChoices):
         
-        ANGELS_FALL_FIRST = 'AN', _('Angels Fall First'),
-        OCEANBORN = 'OC', _('Oceanborn'),
-        WISHMASTER = 'WI', _('Wishmaster'),
-        CENTURY_CHILD = 'CE', _('Century Child'),
-        ONCE = 'ON', _('Once'),
-        DARK_PASSION_PLAY = 'DA', _('Dark Passion Play'),
-        IMAGINAERUM = 'IM', _('Imaginaerum'),
-        ENDLESS_FORMS_MOST_BEAUTIFUL = 'EN', _('Endless Forms Most Beautiful'),
-        HUMAN_NATURE = 'HU', _('Human. :||: Nature.'),
+        ANGELS_FALL_FIRST = 'AN', _('Angels Fall First')
+        OCEANBORN = 'OC', _('Oceanborn')
+        WISHMASTER = 'WI', _('Wishmaster')
+        CENTURY_CHILD = 'CE', _('Century Child')
+        ONCE = 'ON', _('Once')
+        DARK_PASSION_PLAY = 'DA', _('Dark Passion Play')
+        IMAGINAERUM = 'IM', _('Imaginaerum')
+        ENDLESS_FORMS_MOST_BEAUTIFUL = 'EN', _('Endless Forms Most Beautiful')
+        HUMAN_NATURE = 'HU', _('Human. :||: Nature.')
 
     fav_album = models.CharField(
         max_length=2,
