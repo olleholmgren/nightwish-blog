@@ -18,19 +18,24 @@ class ConcertMemoriesView(generic.ListView):
     paginate_by = 8
 
 
-def FavouriteAlbumView(request):
+class FavouriteAlbumView(generic.CreateView):
     
     model = FavouriteAlbum
+    form_class = FavouriteAlbumForm
     template_name = 'favourite_album.html'
-    
-    if request.method == 'POST':
-        form = FavouriteAlbumForm(request.POST)
-        if form.is_valid():
-            selected_choice = form.cleaned_data['fav_album']
-    else:
-        form = FavouriteAlbumForm()
 
-    return render(request, 'favourite_album/album.html')
+
+class AlbumListView(View):
+
+    def get_album(request):
+        if request.method == 'POST':
+            form = FavouriteAlbumForm(request.POST)
+            if form.is_valid():
+                selected_choice = form.cleaned_data['fav_album']
+        else:
+            form = FavouriteAlbumForm()
+
+        return render(request, 'album_list.html')
 
 
 

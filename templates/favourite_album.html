@@ -8,7 +8,7 @@
 <p><strong>Posting as: {{ user.username }}</strong></p>
 <br>
 <br>
-<form action=" {% url 'favourite_album:album' %}" method="POST">
+<form action=" {% url 'album_list' %}" method="POST">
     {% csrf_token %}
     {{ form.as_p }}
     <br>
@@ -28,7 +28,7 @@
         <a href="{% url 'account_login' %}">LOG IN</a>
     </h3>
 </div>
-    {% endif %}
+{% endif %}
 </form>
 
 {% endblock %}
