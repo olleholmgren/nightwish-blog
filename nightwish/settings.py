@@ -66,7 +66,7 @@ LOGOUT_REDIRECT_URL = '/'
 
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
-CSRF_TRUSTED_ORIGINS = ['https://8000-olleholmgre-nightwishbl-nd06hwll3bp.ws-eu105.gitpod.io']
+CSRF_TRUSTED_ORIGINS = ['https://8000-olleholmgre-nightwishbl-nd06hwll3bp.ws-eu106.gitpod.io']
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',

@@ -6,19 +6,18 @@
 <h3>Choose your favourite Album</h3>
 <br>
 <p><strong>Posting as: {{ user.username }}</strong></p>
-
+<br>
+<br>
 <form action="" method="POST">
     {% csrf_token %}
     {{ form.as_p }}
-    <input type="submit" value="Create" />
+    <br>
+    <br>
+    <input type="submit" class="btn" value="Submit"/>
 
 </form>
 
-<form method="POST">
-    {{ favouritealbum_form | crispy }}
-    {% csrf_token %}
-    {{ form.as_p }}
-<button class="btn">Post</button>
+
 {% else %}
 <div>
     <h3>
