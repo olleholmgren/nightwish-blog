@@ -25,9 +25,11 @@ class FavouriteAlbumView(generic.CreateView):
     template_name = 'favourite_album.html'
 
 
-class AlbumListView(View):
+class AlbumListView(generic.ListView):
 
-    def get_album(request):
+    template_name = 'album_list.html'
+    queryset = Post.objects.filter(status=1).order_by('-created_on')
+    def get_album(self, request, *args, **kwargs):
         if request.method == 'POST':
             form = FavouriteAlbumForm(request.POST)
             if form.is_valid():
@@ -36,6 +38,12 @@ class AlbumListView(View):
             form = FavouriteAlbumForm()
 
         return render(request, 'album_list.html')
+    
+    def post(self, request, *args, **kwargs):
+
+        queryset = Post.objects.filter(status=1)
+        post = get_object_or_404(queryset)
+        comments = post.comments.filter(approved=True).order_by("-created_on")
 
 
 
