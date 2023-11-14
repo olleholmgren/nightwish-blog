@@ -7,6 +7,13 @@
 <br>
 <p><strong>Posting as: {{ user.username }}</strong></p>
 
+<form action="" method="POST">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <input type="submit" value="Create" />
+
+</form>
+
 <form method="POST">
     {{ favouritealbum_form | crispy }}
     {% csrf_token %}
