@@ -33,7 +33,7 @@ DEBUG = True
 
 X_FRAME_OPTIONS = 'ORIGIN'
 
-ALLOWED_HOSTS = ['8000-olleholmgre-nightwishbl-nd06hwll3bp.ws-eu105.gitpod.io', 'nightwish-blog.herokuapp.com', 'localhost']
+ALLOWED_HOSTS = ['8000-olleholmgre-nightwishbl-nd06hwll3bp.ws-eu106.gitpod.io', 'nightwish-blog.herokuapp.com', 'localhost']
 
 
 # Application definition
