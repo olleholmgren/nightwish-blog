@@ -1,6 +1,7 @@
 from django.db import models
 from django.contrib.auth.models import User
 from cloudinary.models import CloudinaryField
+from django.utils.translation import gettext_lazy as _
 
 STATUS = (
     (0, 'Draft'),
@@ -51,13 +52,21 @@ class Comment(models.Model):
 
 class FavouriteAlbum(models.Model):
 
-    name = models.ForeignKey(User, on_delete=models.CASCADE)
-    album_title = models.CharField(max_length=80)
-    review = models.TextField()
-    created_on = models.DateTimeField(auto_now_add=True)
+    class AlbumChoices(models.TextChoices):
+        
+        ANGELS_FALL_FIRST = 'AN', _('Angels Fall First'),
+        OCEANBORN = 'OC', _('Oceanborn'),
+        WISHMASTER = 'WI', _('Wishmaster'),
+        CENTURY_CHILD = 'CE', _('Century Child'),
+        ONCE = 'ON', _('Once'),
+        DARK_PASSION_PLAY = 'DA', _('Dark Passion Play'),
+        IMAGINAERUM = 'IM', _('Imaginaerum'),
+        ENDLESS_FORMS_MOST_BEAUTIFUL = 'EN', _('Endless Forms Most Beautiful'),
+        HUMAN_NATURE = 'HU', _('Human. :||: Nature.'),
 
-    class Meta:
-        ordering = ['created_on']
+    fav_album = models.CharField(
+        max_length=2,
+        choices=AlbumChoices.choices,
+        default=AlbumChoices.ANGELS_FALL_FIRST,
+    )
 
-    def __str__(self):
-        return f'Album {self.album_title} by {self.name}'
