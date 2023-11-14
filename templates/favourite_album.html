@@ -8,7 +8,7 @@
 <p><strong>Posting as: {{ user.username }}</strong></p>
 <br>
 <br>
-<form action=" {% url favourite_album:album %}" method="POST">
+<form action=" {% url 'favourite_album:album' %}" method="POST">
     {% csrf_token %}
     {{ form.as_p }}
     <br>
