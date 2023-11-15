@@ -16,7 +16,7 @@ class PostAdmin(SummernoteModelAdmin):
 @admin.register(FavouriteAlbum)
 class AlbumAdmin(admin.ModelAdmin):
 
-    list_display = ['fav_album']
+    list_display = ['favourite_album']
 
 
 @admin.register(Comment)
