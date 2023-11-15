@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Post, Comment
+from .models import Post, Comment, FavouriteAlbum
 from django_summernote.admin import SummernoteModelAdmin
 
 
@@ -11,6 +11,12 @@ class PostAdmin(SummernoteModelAdmin):
     list_filter = ('status', 'created_on')
     prepopulated_fields = {'slug': ('title',)}
     summernote_fields = ('content',)
+
+
+@admin.register(FavouriteAlbum)
+class AlbumAdmin(admin.ModelAdmin):
+
+    list_display = ['fav_album']
 
 
 @admin.register(Comment)
