@@ -86,6 +86,7 @@ def post_view(request, slug, *args, **kwargs):
         },
     )
 
+
 def post_like(request, slug, *args, **kwargs):
 
     post = get_object_or_404(Post, slug=slug)
@@ -95,5 +96,20 @@ def post_like(request, slug, *args, **kwargs):
             post.likes.remove(request.user)
         else:
             post.likes.add(request.user)
+
+    return HttpResponseRedirect(reverse('post_view', args=[slug]))
+
+
+def comment_delete(request, slug, comment_id, *args, **kwargs):
+
+    queryset = Post.objects.filter(status=1)
+    post = get_object_or_404(queryset)
+    comment = post.comments.filter(id=comment_id).first()
+
+    if comment.name == request.user.username:
+        comment.delete()
+        messages.add_message(request, messages.SUCCESS, 'Comment deleted!')
+    else:
+        messages.add_message(request, messages.ERROR, 'You can only delete your own comments!')
 
     return HttpResponseRedirect(reverse('post_view', args=[slug]))
