@@ -34,7 +34,7 @@ class AlbumListView(generic.ListView):
         if request.method == 'POST':
             form = FavouriteAlbumForm(request.POST)
             if form.is_valid():
-                selected_choice = form.cleaned_data['fav_album']
+                selected_choice = form.cleaned_data['favourite_album']
         else:
             form = FavouriteAlbumForm()
 

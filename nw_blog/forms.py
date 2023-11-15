@@ -12,7 +12,7 @@ class FavouriteAlbumForm(forms.ModelForm):
     
     class Meta:
         model = FavouriteAlbum
-        fields = ['fav_album']
+        fields = ['favourite_album']
         widgets = {
-            'fav_album': forms.Select()
+            'favourite_album': forms.Select()
         }
