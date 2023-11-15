@@ -7,6 +7,6 @@ urlpatterns = [
     path('concert_memories/', views.ConcertMemoriesView.as_view(), name='concert_memories'),
     path('favourite_album/', views.FavouriteAlbumView.as_view(), name='favourite_album'),
     path('album_list/', views.AlbumListView.as_view(), name='album_list'),
-    path('<slug:slug>/', views.PostDetailView.as_view(), name='post_view'),
+    path('<slug:slug>/', views.post_view, name='post_view'),
     path('like/<slug:slug>', views.PostLike.as_view(), name='post_like')
 ]
