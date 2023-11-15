@@ -22,7 +22,8 @@ class Post(models.Model):
     status = models.IntegerField(choices=STATUS, default=0)
     created_on = models.DateTimeField(auto_now_add=True)
     updated_on = models.DateTimeField(auto_now=True)
-    likes = models.ManyToManyField(User, related_name='blogpost_like', blank=True)
+    likes = models.ManyToManyField(User,
+                                   related_name='blogpost_like', blank=True)
 
     class Meta:
         ordering = ['-created_on']
@@ -54,7 +55,7 @@ class Comment(models.Model):
 class FavouriteAlbum(models.Model):
 
     class AlbumChoices(models.TextChoices):
-        
+
         CHOOSE_AN_ALBUM = 'CH', _('Choose an album')
         ANGELS_FALL_FIRST = 'AN', _('Angels Fall First')
         OCEANBORN = 'OC', _('Oceanborn')
@@ -66,13 +67,11 @@ class FavouriteAlbum(models.Model):
         ENDLESS_FORMS_MOST_BEAUTIFUL = 'EN', _('Endless Forms Most Beautiful')
         HUMAN_NATURE = 'HU', _('Human. :||: Nature.')
 
-        
-
     favourite_album = models.CharField(
         max_length=2,
         choices=AlbumChoices.choices,
         default=AlbumChoices.CHOOSE_AN_ALBUM,
     )
-    
+
     def __str__(self):
         return self.favourite_album
