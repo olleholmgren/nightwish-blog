@@ -1,6 +1,7 @@
 from django.shortcuts import render, get_object_or_404, reverse
 from django.views import generic, View
 from django.http import HttpResponseRedirect
+from django.contrib import messages
 from .models import Post, FavouriteAlbum
 from .forms import CommentForm, FavouriteAlbumForm
 
@@ -85,13 +86,14 @@ def post_view(request, slug, *args, **kwargs):
         },
     )
 
-class PostLike(View):
+def post_like(request, slug, *args, **kwargs):
 
-    def post(self, request, slug, *args, **kwargs):
-        post = get_object_or_404(Post, slug=slug)
+    post = get_object_or_404(Post, slug=slug)
+
+    if request.method == "POST" and request.user.is_authenticated:
         if post.likes.filter(id=request.user.id).exists():
             post.likes.remove(request.user)
         else:
             post.likes.add(request.user)
 
-        return HttpResponseRedirect(reverse('post_view', args=[slug]))
+    return HttpResponseRedirect(reverse('post_view', args=[slug]))
