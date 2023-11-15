@@ -1,7 +1,7 @@
 {% extends 'base.html' %}
 
 {% block content %}
-
+{% load static %}
 {% load crispy_forms_tags %}
     <h2>
         {{ post.post_title }}
@@ -40,8 +40,9 @@
     {% endif %}
     {% endif %}
 
-{% endblock %}
+{% endblock content %}
 
-    
-</body>
-</html>
+{% block extras %}
+{% load static %}
+<script src="{% static 'js/comments.js' %}"></script>
+{% endblock extras %}
