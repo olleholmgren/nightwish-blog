@@ -8,5 +8,5 @@ urlpatterns = [
     path('favourite_album/', views.FavouriteAlbumView.as_view(), name='favourite_album'),
     path('album_list/', views.AlbumListView.as_view(), name='album_list'),
     path('<slug:slug>/', views.post_view, name='post_view'),
-    path('like/<slug:slug>', views.PostLike.as_view(), name='post_like')
+    path('like/<slug:slug>', views.post_like, name='post_like')
 ]
