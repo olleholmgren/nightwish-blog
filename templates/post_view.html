@@ -31,10 +31,10 @@
             <form class="d-inline" action="{% url 'post_like' post.slug %}" method="POST">
                 {% csrf_token %}
                 {% if liked %}
-                <button type="submit" name="blogpost_id" value="{{post.slug}}" class="btn-like"
+                <button type="submit" name="blogpost_id" value="{{ post.slug }}" class="btn-like"
                     aria-label="like"><i class="fas fa-heart"></i></button>
                 {% else %}
-                <button type="submit" name="blogpost_id" value="{{post.slug}}" class="btn-like"
+                <button type="submit" name="blogpost_id" value="{{ post.slug }}" class="btn-like"
                     aria-label="like"><i class="far fa-heart"></i></button>
                 {% endif %}
             </form>
@@ -73,6 +73,7 @@
                     {% if not comment.approved and comment.name == user.username %}
                     <p class="approval">This comment is awaiting approval</p>{% endif %}
                     {% if user.is_authenticated and comment.name == user.username %}
+                    <a href="{% url 'comment_delete' comment.id post.slug %}">Delete</a>
                     <button class="btn btn-delete" comment_id="{{ comment.id }}">Delete</button>
                     <button class="btn btn-edit" comment_id="{{ comment.id }}">Edit</button>
                     {% endif %}
