@@ -73,9 +73,12 @@
                     {% if not comment.approved and comment.name == user.username %}
                     <p class="approval">This comment is awaiting approval</p>{% endif %}
                     {% if user.is_authenticated and comment.name == user.username %}
-                    <a href="{% url 'comment_delete' comment.id post.slug %}">Delete</a>
-                    <button class="btn btn-delete" comment_id="{{ comment.id }}">Delete</button>
-                    <button class="btn btn-edit" comment_id="{{ comment.id }}">Edit</button>
+                    <a href="{% url 'comment_delete' comment.id post.slug %}">
+                        <button class="btn btn-delete" comment_id="{{ comment.id }}">Delete</button>
+                    </a>
+                    <a href="{% url 'comment_edit' comment.id post.slug %}">
+                        <button class="btn btn-edit" comment_id="{{ comment.id }}">Edit</button>
+                    </a>
                     {% endif %}
                 </div>
                 {% endfor %}
