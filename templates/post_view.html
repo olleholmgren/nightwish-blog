@@ -15,13 +15,13 @@
     <br>
     <br>
     </h5>
-    <h5>
+    <div class="blog-image">
         {% if "placeholder" in post.featured_image.url %}
         <img src="{% static 'images/default.jpg' %}" class="scale" alt="placeholder">
         {% else %}
         <img src="{{ post.featured_image.url }}" class="scale" alt="{{ post.title }}">
         {% endif %}
-    </h5>
+    </div>
     <div>
         {{ post.content | safe }}
     </div>

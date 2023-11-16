@@ -35,6 +35,12 @@ body {
     align-items: center;
   }
 
+.blog-image img{
+  height: auto;
+  width: 100%;
+  margin: 1rem auto;
+}
+
 .block-content-left {
   text-align: left;
 }
