@@ -51,7 +51,7 @@
             {{ comment_count }}</strong>
     </div>
     <div class="row">
-        <div class="col-md-8 card mb-4  mt-3 ">
+        <div class="comments">
             <h3>Comments:</h3>
             <div class="card-body">
                 <!-- We want a for loop inside the empty control tags to iterate through each comment in comments -->
@@ -77,7 +77,6 @@
                     <button class="btn btn-edit" comment_id="{{ comment.id }}">Edit</button>
                     {% endif %}
                 </div>
-                <!-- Our for loop ends here -->
                 {% endfor %}
             </div>
         </div>
@@ -93,11 +92,15 @@
     {% if user.is_authenticated %}
     <h3>Leave a comment:</h3>
     <p>Posting as: {{ user.username }}</p>
-    <form method="post" style="margin-top: 1.3em;">
-        {{ comment_form | crispy }}
-        {% csrf_token %}
-        <button type="submit" class="btn btn-signup btn-lg">Submit</button>
-    </form>
+    <div class="comment-form">
+        <form method="post" style="margin-top: 1.3em;">
+            {{ comment_form | crispy }}
+            {% csrf_token %}
+            <button type="submit" class="btn btn-signup btn-lg">Submit</button>
+        </form>
+        <br>
+        <br>
+    </div>
     {% endif %}
     {% endif %}
 
