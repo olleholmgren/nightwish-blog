@@ -46,6 +46,15 @@ class AlbumListView(generic.ListView):
         post = get_object_or_404(queryset)
         comments = post.comments.filter(approved=True).order_by("-created_on")
 
+        return render(
+            request,
+            "album_list.html",
+            {
+                "post": post,
+                "comments": comments,
+            },
+        )
+
 
 
 def post_view(request, slug, *args, **kwargs):
