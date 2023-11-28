@@ -29,11 +29,11 @@ TEMPLATES_DIR = os.path.join(BASE_DIR, 'templates')
 SECRET_KEY = os.environ.get('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 X_FRAME_OPTIONS = 'ORIGIN'
 
-ALLOWED_HOSTS = ['8000-olleholmgre-nightwishbl-nd06hwll3bp.ws-eu106.gitpod.io', 'nightwish-blog.herokuapp.com', 'localhost']
+ALLOWED_HOSTS = ['8000-olleholmgre-nightwishbl-nd06hwll3bp.ws-eu106.gitpod.io', '8000-olleholmgre-nightwishbl-kws6ip88bf3.ws-eu106.gitpod.io', 'nightwish-blog.herokuapp.com', 'localhost']
 
 
 # Application definition
