@@ -4,6 +4,7 @@ from django.http import HttpResponseRedirect
 from django.contrib import messages
 from .models import Post, FavouriteAlbum
 from .forms import CommentForm, FavouriteAlbumForm
+from django.urls import reverse_lazy
 
 
 class IndexView(generic.ListView):
@@ -24,13 +25,23 @@ class FavouriteAlbumView(generic.CreateView):
     model = FavouriteAlbum
     form_class = FavouriteAlbumForm
     template_name = 'favourite_album.html'
+    success_url = reverse_lazy('album_list')
 
 
 class AlbumListView(generic.ListView):
 
     template_name = 'album_list.html'
-    queryset = Post.objects.filter(status=1).order_by('-created_on')
+    model = FavouriteAlbum
+    queryset = FavouriteAlbum.objects.filter(status=1).order_by('-created_on')
     
+    def get_queryset(self):
+
+        selected_album = self.request.POST.get('favourite_album')
+        if selected_album:
+            return FavouriteAlbum.objects.filter(status=1, favourite_album=selected_album).order_by('-created_on')
+        else:
+            return super().get_queryset()
+
     def get_album(self, **kwargs):
         
         album = super().get_album(**kwargs)
@@ -41,24 +52,24 @@ class AlbumListView(generic.ListView):
 
         form = FavouriteAlbumForm(request.POST)
         if form.is_valid():
-            selected_choice = form.cleaned_data['favourite_album']
-            queryset = Post.objects.filter(status=1, favourite_album=selected_choice).order_by('-created_on')
+            form.save()
+            return self.render_to_response(self.get_album(form=form))
         else:
             messages.error(request, 'Invalid form submission.')
+            return self.render_to_response(self.get_album(form=form))
 
-        album = self.get_context_data()
-        album['form'] = form
-        return self.render_to_response(album)
-
-
-        return render(
-            request,
-            "album_list.html",
-            {
-                "favourite_album": favourite_album,
-                "comments": comments,
-            },
-        )
+        #album = self.get_album()
+        #album['form'] = form
+        #
+#
+        #render(
+        #    request,
+        #    "album_list.html",
+        #    {
+        #        "favourite_album": favourite_album,
+        #        "comments": comments,
+        #    },
+        #)
 
 
 
