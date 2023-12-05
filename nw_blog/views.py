@@ -50,7 +50,7 @@ class AlbumListView(generic.ListView):
             request,
             "album_list.html",
             {
-                "post": post,
+                "favourite_album": favourite_album,
                 "comments": comments,
             },
         )
