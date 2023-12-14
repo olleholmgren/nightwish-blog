@@ -20,7 +20,7 @@ class ConcertMemoriesView(generic.ListView):
     paginate_by = 8
 
 
-class FavouriteAlbumView(generic.CreateView):
+class FavouriteAlbumView(generic.ListView):
     
     model = FavouriteAlbum
     form_class = FavouriteAlbumForm
@@ -42,18 +42,18 @@ class AlbumListView(generic.ListView):
         else:
             return super().get_queryset()
 
-    def get_album(self, **kwargs):
+    def get_context_data(self, **kwargs):
         
-        album = super().get_album(**kwargs)
-        album['favourite_album_form'] = FavouriteAlbumForm()
-        return album
+        context = super().get_context_data(**kwargs)
+        context['favourite_album_form'] = FavouriteAlbumForm()
+        return context
     
     def post(self, request, *args, **kwargs):
 
         form = FavouriteAlbumForm(request.POST)
         if form.is_valid():
             form.save()
-            return self.render_to_response(self.get_album(form=form))
+            return self.render_to_response(self.get_context_data(form=form))
         else:
             messages.error(request, 'Invalid form submission.')
             return self.render_to_response(self.get_album(form=form))
