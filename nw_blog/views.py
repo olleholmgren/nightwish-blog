@@ -42,6 +42,12 @@ class AlbumListView(generic.ListView):
         else:
             return super().get_queryset()
 
+    def get_context_data(self, **kwargs):
+
+        context = super().get_context_data(**kwargs)
+        context['favourite_album_form'] = FavouriteAlbumForm()
+        return context
+
     def post(self, request, *args, **kwargs):
 
         queryset = Post.objects.filter(status=1)
