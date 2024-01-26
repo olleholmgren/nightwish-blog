@@ -50,21 +50,14 @@ class AlbumListView(generic.ListView):
 
     def post(self, request, *args, **kwargs):
 
-        queryset = Post.objects.filter(status=1)
-        post = get_object_or_404(queryset)
-        comments = post.comments.filter(approved=True).order_by("-created_on")
-
-        return render(
-            request,
-            "album_list.html",
-            {
-                "post": post,
-                "comments": comments,
-            },
-        )
-
-
-
+        form = FavouriteAlbumForm(request.POST)
+        if form.is_valid():
+            form.save()
+            return self.render_to_response(self.get_context_data(form=form))
+        else:
+            messages.error(request, 'Invalid form submission.')
+            return self.render_to_response(self.get_album(form=form))
+    
 def post_view(request, slug, *args, **kwargs):
    
     queryset = Post.objects.filter(status=1)
