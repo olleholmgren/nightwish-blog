@@ -7,8 +7,14 @@
 {% load static %}
 {% load crispy_forms_tags %}
     <h2>
-        {{ favouritealbum.favourite_album }}
-    <br>
+    {{ favouritealbum.albumchoices.favourite_album }}
+    {% for album in favourite_album %}
+    {{ selected_album }}
+    {{ selected_choice }}
+    {{ albumchoices }}
+    {{ context }}
+    {{ favourite_album }}
+    {% endfor %}
     </h2>
     <h5>
 

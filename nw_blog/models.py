@@ -67,10 +67,10 @@ class FavouriteAlbum(models.Model):
         ENDLESS_FORMS_MOST_BEAUTIFUL = 'EN', _('Endless Forms Most Beautiful')
         HUMAN_NATURE = 'HU', _('Human. :||: Nature.')
 
-    status = models.IntegerField(default=1)
+    status = models.IntegerField(choices=STATUS, default=1)
     created_on = models.DateTimeField(auto_now_add=True)
     favourite_album = models.CharField(
-        max_length=2,
+        max_length=30,
         choices=AlbumChoices.choices,
         default=AlbumChoices.CHOOSE_AN_ALBUM,
     )
