@@ -8,7 +8,9 @@
 {% load crispy_forms_tags %}
 
     {% for object in object_list %}
-    {{ object }}
+    
+    {{ object.author }}
+    
     {% endfor %}
 
 {% endblock content %}
