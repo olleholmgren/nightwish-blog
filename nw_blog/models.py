@@ -54,7 +54,7 @@ class Comment(models.Model):
 
 class FavouriteAlbum(models.Model):
 
-    author = models.ForeignKey(User, on_delete=models.CASCADE,
+    author = models.ForeignKey(User, default=None, null=True, blank=True, on_delete=models.CASCADE,
                                related_name='favourite_album')
     
 
@@ -78,6 +78,9 @@ class FavouriteAlbum(models.Model):
         choices=AlbumChoices.choices,
         default=AlbumChoices.CHOOSE_AN_ALBUM,
     )
+
+    class Meta:
+        ordering = ['-created_on']
 
     def __str__(self):
         return self.favourite_album

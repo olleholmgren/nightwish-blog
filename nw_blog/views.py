@@ -30,9 +30,9 @@ class FavouriteAlbumView(generic.CreateView):
 
 class AlbumListView(generic.ListView):
 
-    template_name = 'album_list.html'
     model = FavouriteAlbum
     queryset = FavouriteAlbum.objects.filter(status=1).order_by('-created_on')
+    template_name = 'album_list.html'
 
     def get_queryset(self):
 
@@ -44,7 +44,7 @@ class AlbumListView(generic.ListView):
 
     def get_context_data(self, **kwargs):
 
-        queryset = kwargs.pop('object_list', None)
+        queryset = kwargs.pop('album_list', None)
         if queryset is None:
             self.object_list = self.model.objects.all()
         context = super().get_context_data(**kwargs)
