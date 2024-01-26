@@ -20,7 +20,7 @@ class ConcertMemoriesView(generic.ListView):
     paginate_by = 8
 
 
-class FavouriteAlbumView(generic.ListView):
+class FavouriteAlbumView(generic.CreateView):
     
     model = FavouriteAlbum
     form_class = FavouriteAlbumForm
