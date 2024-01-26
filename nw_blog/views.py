@@ -2,6 +2,7 @@ from django.shortcuts import render, get_object_or_404, reverse
 from django.views import generic, View
 from django.http import HttpResponseRedirect
 from django.contrib import messages
+from django.urls import reverse_lazy
 from .models import Post, FavouriteAlbum
 from .forms import CommentForm, FavouriteAlbumForm
 
@@ -19,11 +20,12 @@ class ConcertMemoriesView(generic.ListView):
     paginate_by = 8
 
 
-class FavouriteAlbumView(generic.CreateView):
+class FavouriteAlbumView(generic.ListView):
     
     model = FavouriteAlbum
     form_class = FavouriteAlbumForm
     template_name = 'favourite_album.html'
+    success_url = reverse_lazy('album_list')
 
 
 class AlbumListView(generic.ListView):
