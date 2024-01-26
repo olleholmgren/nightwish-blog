@@ -31,17 +31,17 @@ class FavouriteAlbumView(generic.ListView):
 class AlbumListView(generic.ListView):
 
     template_name = 'album_list.html'
-    queryset = Post.objects.filter(status=1).order_by('-created_on')
-    def get_album(self, request, *args, **kwargs):
-        if request.method == 'POST':
-            form = FavouriteAlbumForm(request.POST)
-            if form.is_valid():
-                selected_choice = form.cleaned_data['favourite_album']
-        else:
-            form = FavouriteAlbumForm()
+    model = FavouriteAlbum
+    queryset = FavouriteAlbum.objects.filter(status=1).order_by('-created_on')
 
-        return render(request, 'album_list.html')
-    
+    def get_queryset(self):
+
+        selected_album = self.request.POST.get('favourite_album')
+        if selected_album:
+            return FavouriteAlbum.objects.filter(status=1, favourite_album=selected_album).order_by('-created_on')
+        else:
+            return super().get_queryset()
+
     def post(self, request, *args, **kwargs):
 
         queryset = Post.objects.filter(status=1)
