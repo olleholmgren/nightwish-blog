@@ -6,23 +6,9 @@
 <h1>FAVOURITE ALBUM LIST</h1>
 {% load static %}
 {% load crispy_forms_tags %}
-    <h2>
-    {{ favouritealbum.albumchoices.favourite_album }}
-    {% for album in favourite_album %}
-    {{ selected_album }}
-    {{ selected_choice }}
-    {{ albumchoices }}
-    {{ context }}
-    {{ favourite_album }}
+
+    {% for object in object_list %}
+    {{ object }}
     {% endfor %}
-    </h2>
-    <h5>
 
-    </h5>
-    <h5>
-
-    <br>
-    <br>
-    </h5>
-
-{% endblock %}
+{% endblock content %}

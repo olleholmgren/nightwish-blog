@@ -54,15 +54,19 @@ class Comment(models.Model):
 
 class FavouriteAlbum(models.Model):
 
+    author = models.ForeignKey(User, on_delete=models.CASCADE,
+                               related_name='favourite_album')
+    
+
     class AlbumChoices(models.TextChoices):
 
         CHOOSE_AN_ALBUM = 'CH', _('Choose an album')
         ANGELS_FALL_FIRST = 'AN', _('Angels Fall First')
         OCEANBORN = 'OC', _('Oceanborn')
-        WISHMASTER = 'WI', _('Wishmaster')
-        CENTURY_CHILD = 'CE', _('Century Child')
+        WISHMASTER = ('Wishmaster')
+        CENTURY_CHILD = 'Century Child'
         ONCE = 'ON', _('Once')
-        DARK_PASSION_PLAY = 'DA', _('Dark Passion Play')
+        DARK_PASSION_PLAY = 'Dark Passion Play', _('DA')
         IMAGINAERUM = 'IM', _('Imaginaerum')
         ENDLESS_FORMS_MOST_BEAUTIFUL = 'EN', _('Endless Forms Most Beautiful')
         HUMAN_NATURE = 'HU', _('Human. :||: Nature.')
