@@ -44,6 +44,9 @@ class AlbumListView(generic.ListView):
 
     def get_context_data(self, **kwargs):
 
+        queryset = kwargs.pop('object_list', None)
+        if queryset is None:
+            self.object_list = self.model.objects.all()
         context = super().get_context_data(**kwargs)
         context['favourite_album_form'] = FavouriteAlbumForm()
         return context
