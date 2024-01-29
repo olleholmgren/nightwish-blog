@@ -60,16 +60,16 @@ class FavouriteAlbum(models.Model):
 
     class AlbumChoices(models.TextChoices):
 
-        CHOOSE_AN_ALBUM = 'CH', _('Choose an album')
-        ANGELS_FALL_FIRST = 'AN', _('Angels Fall First')
-        OCEANBORN = 'OC', _('Oceanborn')
+        CHOOSE_AN_ALBUM = ('Choose an album')
+        ANGELS_FALL_FIRST = ('Angels Fall First')
+        OCEANBORN = ('Oceanborn')
         WISHMASTER = ('Wishmaster')
-        CENTURY_CHILD = 'Century Child'
-        ONCE = 'ON', _('Once')
-        DARK_PASSION_PLAY = 'Dark Passion Play', _('DA')
-        IMAGINAERUM = 'IM', _('Imaginaerum')
-        ENDLESS_FORMS_MOST_BEAUTIFUL = 'EN', _('Endless Forms Most Beautiful')
-        HUMAN_NATURE = 'HU', _('Human. :||: Nature.')
+        CENTURY_CHILD = ('Century Child')
+        ONCE = ('Once')
+        DARK_PASSION_PLAY = ('Dark Passion Play')
+        IMAGINAERUM = ('Imaginaerum')
+        ENDLESS_FORMS_MOST_BEAUTIFUL = ('Endless Forms Most Beautiful')
+        HUMAN_NATURE = ('Human. :||: Nature.')
 
     status = models.IntegerField(choices=STATUS, default=1)
     created_on = models.DateTimeField(auto_now_add=True)
