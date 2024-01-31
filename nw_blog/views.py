@@ -29,6 +29,7 @@ class FavouriteAlbumView(generic.CreateView):
 
 
 class AlbumListView(generic.ListView):
+    
     model = FavouriteAlbum
     template_name = 'album_list.html'
     paginate_by = 8
@@ -51,7 +52,19 @@ class AlbumListView(generic.ListView):
     def post(self, request, *args, **kwargs):
         self.object_list = self.get_queryset()
         return self.render_to_response(self.get_context_data())
+
+
+class UserFavouriteAlbumListView(ListView):
     
+    model = FavouriteAlbum
+    template_name = 'user_favourite_album_list.html'
+    context_object_name = 'favourite_albums'
+
+    def get_queryset(self):
+        
+        return FavouriteAlbum.objects.exclude(author=None).select_related('author').order_by('author')
+
+
 def post_view(request, slug, *args, **kwargs):
    
     queryset = Post.objects.filter(status=1)

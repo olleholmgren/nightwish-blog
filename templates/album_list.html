@@ -9,12 +9,9 @@
 {% if selected_album %}
     <div>
         <h4>Your selected favorite album is: {{ selected_album }}</h4>
+        <h4>COMMENT</h4>
     </div>
 {% endif %}
-    {% for object in object_list %}
-    
-    {{ object.author }}
-    
-    {% endfor %}
+
 
 {% endblock content %}
