@@ -29,37 +29,28 @@ class FavouriteAlbumView(generic.CreateView):
 
 
 class AlbumListView(generic.ListView):
-
     model = FavouriteAlbum
-    queryset = FavouriteAlbum.objects.filter(status=1).order_by('-created_on')
     template_name = 'album_list.html'
+    paginate_by = 8
 
     def get_queryset(self):
-
-        selected_album = self.request.POST.get('favourite_album')
+        selected_album = self.request.POST.get('favourite_album', None)
         if selected_album:
             return FavouriteAlbum.objects.filter(status=1, favourite_album=selected_album).order_by('-created_on')
         else:
-            return super().get_queryset()
+            return FavouriteAlbum.objects.filter(status=1).order_by('-created_on')
 
     def get_context_data(self, **kwargs):
-
-        queryset = kwargs.pop('album_list', None)
-        if queryset is None:
-            self.object_list = self.model.objects.all()
         context = super().get_context_data(**kwargs)
-        context['favourite_album_form'] = FavouriteAlbumForm()
+        context['favourite_album_form'] = FavouriteAlbumForm(self.request.POST or None)
+        
+        if self.request.POST:
+            context['selected_album'] = self.request.POST.get('favourite_album', None)
         return context
 
     def post(self, request, *args, **kwargs):
-
-        form = FavouriteAlbumForm(request.POST)
-        if form.is_valid():
-            form.save()
-            return self.render_to_response(self.get_context_data(form=form))
-        else:
-            messages.error(request, 'Invalid form submission.')
-            return self.render_to_response(self.get_album(form=form))
+        self.object_list = self.get_queryset()
+        return self.render_to_response(self.get_context_data())
     
 def post_view(request, slug, *args, **kwargs):
    
