@@ -7,9 +7,9 @@ urlpatterns = [
     path('concert_memories/', views.ConcertMemoriesView.as_view(), name='concert_memories'),
     path('favourite_album/', views.FavouriteAlbumView.as_view(), name='favourite_album'),
     path('album_list/', views.AlbumListView.as_view(), name='album_list'),
+    path('user_favourite_albums/', views.UserFavouriteAlbumListView.as_view(), name='user_favourite_albums'),
     path('<slug:slug>/', views.post_view, name='post_view'),
     path('like/<slug:slug>', views.post_like, name='post_like'),
     path('delete_comment/<int:comment_id>/<slug:slug>/', views.comment_delete, name='comment_delete'),
-    path('edit_comment/<int:comment_id>/<slug:slug>/', views.comment_edit, name='comment_edit'),
-    path('user_favourite_albums/', views.UserFavouriteAlbumListView.as_view(), name='user_favourite_albums'),
+    path('edit_comment/<int:comment_id>/<slug:slug>/', views.comment_edit, name='comment_edit')
 ]
