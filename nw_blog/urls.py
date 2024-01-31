@@ -11,5 +11,5 @@ urlpatterns = [
     path('like/<slug:slug>', views.post_like, name='post_like'),
     path('delete_comment/<int:comment_id>/<slug:slug>/', views.comment_delete, name='comment_delete'),
     path('edit_comment/<int:comment_id>/<slug:slug>/', views.comment_edit, name='comment_edit'),
-    path('user_favourite_albums/', UserFavouriteAlbumListView.as_view(), name='user_favourite_albums'),
+    path('user_favourite_albums/', views.UserFavouriteAlbumListView.as_view(), name='user_favourite_albums'),
 ]

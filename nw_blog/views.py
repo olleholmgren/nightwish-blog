@@ -54,7 +54,7 @@ class AlbumListView(generic.ListView):
         return self.render_to_response(self.get_context_data())
 
 
-class UserFavouriteAlbumListView(ListView):
+class UserFavouriteAlbumListView(generic.ListView):
     
     model = FavouriteAlbum
     template_name = 'user_favourite_album_list.html'
