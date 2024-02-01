@@ -8,13 +8,16 @@
 <p><strong>Posting as: {{ user.username }}</strong></p>
 <br>
 <br>
-<form action=" {% url 'album_list' %}" method="POST">
+<form action=" {% url 'favourite_album' %}" method="POST">
     {% csrf_token %}
     {{ form.as_p }}
     <br>
     <br>
     <button type="submit" class="btn">Submit</button>
-    {{ post.content }}
+    {{ content.as_p }}
+    {{ form.content }}
+    {{ form.none_field_errors }}
+    {{ form.errors }}
 </form>
 
 

@@ -2,6 +2,7 @@ from django.shortcuts import render, get_object_or_404, reverse
 from django.views import generic, View
 from django.http import HttpResponseRedirect
 from django.contrib import messages
+from django.contrib.auth.mixins import LoginRequiredMixin
 from django.urls import reverse_lazy
 from .models import Post, FavouriteAlbum
 from .forms import CommentForm, FavouriteAlbumForm
@@ -25,7 +26,14 @@ class FavouriteAlbumView(generic.CreateView):
     model = FavouriteAlbum
     form_class = FavouriteAlbumForm
     template_name = 'favourite_album.html'
-    success_url = reverse_lazy('album_list')
+    success_url = reverse_lazy('user_favourite_albums')
+
+    def form_valid(self, form):
+        form.instance.author = self.request.user
+        response = super().form_valid(form)
+        messages.add_message(self.request, messages.SUCCESS, 'Your favourite album has been saved')
+        return response
+
 
 
 class AlbumListView(generic.ListView):
@@ -35,11 +43,12 @@ class AlbumListView(generic.ListView):
     paginate_by = 8
 
     def get_queryset(self):
-        selected_album = self.request.POST.get('favourite_album', None)
-        if selected_album:
-            return FavouriteAlbum.objects.filter(status=1, favourite_album=selected_album).order_by('-created_on')
-        else:
-            return FavouriteAlbum.objects.filter(status=1).order_by('-created_on')
+#        selected_album = self.request.POST.get('favourite_album', None)
+#        if selected_album:
+#            return FavouriteAlbum.objects.filter(status=1, favourite_album=selected_album).order_by('-created_on')
+#        else:
+#            return FavouriteAlbum.objects.filter(status=1).order_by('-created_on')
+        return FavouriteAlbum.objects.filter(author=self.request.user, status=1).order_by('-created_on')
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
@@ -57,7 +66,7 @@ class AlbumListView(generic.ListView):
 class UserFavouriteAlbumListView(generic.ListView):
     
     model = FavouriteAlbum
-    template_name = 'user_favourite_album_list.html'
+    template_name = 'user_favourite_albums.html'
     context_object_name = 'favourite_albums'
 
     def get_queryset(self):
