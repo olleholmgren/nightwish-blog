@@ -6,10 +6,12 @@
 <h1>FAVOURITE ALBUM LIST</h1>
 {% load static %}
 {% load crispy_forms_tags %}
+
 {% if selected_album %}
     <div>
-        <h4>Your selected favorite album is: {{ selected_album }}</h4>
-        <h4>COMMENT</h4>
+        <h4>{{ user }}</h4>
+        <h4>Your favourite album is: {{ selected_album }}</h4>
+        <h4> {{ post.content }} </h4>
     </div>
 {% endif %}
 

@@ -56,11 +56,14 @@ class FavouriteAlbum(models.Model):
 
     author = models.ForeignKey(User, default=None, null=True, blank=True, on_delete=models.CASCADE,
                                related_name='favourite_album')
+    content = models.TextField()
+    status = models.IntegerField(choices=STATUS, default=0)
+    created_on = models.DateTimeField(auto_now_add=True)
+    updated_on = models.DateTimeField(auto_now=True)
     
 
     class AlbumChoices(models.TextChoices):
 
-        CHOOSE_AN_ALBUM = ('Choose an album')
         ANGELS_FALL_FIRST = ('Angels Fall First')
         OCEANBORN = ('Oceanborn')
         WISHMASTER = ('Wishmaster')
