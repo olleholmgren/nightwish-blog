@@ -79,7 +79,7 @@ class FavouriteAlbum(models.Model):
     favourite_album = models.CharField(
         max_length=30,
         choices=AlbumChoices.choices,
-        default=AlbumChoices.CHOOSE_AN_ALBUM,
+        default=AlbumChoices.ANGELS_FALL_FIRST,
     )
 
     class Meta:
