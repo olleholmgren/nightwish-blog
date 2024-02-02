@@ -1,6 +1,8 @@
 from django.shortcuts import render, get_object_or_404, reverse
 from django.views import generic, View
 from django.http import HttpResponseRedirect
+from django.shortcuts import redirect
+from django.contrib.auth.decorators import login_required
 from django.contrib import messages
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.urls import reverse_lazy
@@ -34,6 +36,25 @@ class FavouriteAlbumView(generic.CreateView):
         messages.add_message(self.request, messages.SUCCESS, 'Your favourite album has been saved')
         return response
 
+@login_required
+def FavouriteAlbum_delete(request, favouritealbum_id):
+    album = get_object_or_404(FavouriteAlbum, id=favouritealbum_id, author=request.user)
+    album.delete()
+    messages.success(request, 'Your favorite album has been deleted.')
+    return redirect('album_list')
+
+@login_required
+def FavouriteAlbum_edit(request, favouritealbum_id):
+    album = get_object_or_404(FavouriteAlbum, id=favouritealbum_id, author=request.user)
+    if request.method == 'POST':
+        form = FavouriteAlbumForm(request.POST, instance=album)
+        if form.is_valid():
+            form.save()
+            messages.success(request, 'Your favorite album has been updated.')
+            return redirect('album_list')
+    else:
+        form = FavouriteAlbumForm(instance=album)
+    return render(request, 'favourite_album_edit.html', {'form': form})
 
 
 class AlbumListView(generic.ListView):
@@ -160,3 +181,4 @@ def comment_delete(request, slug, comment_id, *args, **kwargs):
         messages.add_message(request, messages.ERROR, 'You can only delete your own comments!')
 
     return HttpResponseRedirect(reverse('post_view', args=[slug]))
+
