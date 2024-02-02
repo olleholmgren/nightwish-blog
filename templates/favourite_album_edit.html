@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+{% load crispy_forms_tags %}
+
+{% if user.is_authenticated %}
+<form action=" {% url 'favourite_album' %}" method="POST">
+    {% csrf_token %}
+    {{ form|crispy }}
+    {{ body|crispy }}
+    {{ fav_album.body }}
+    {{ body }}
+    <br>
+    <br>
+    <button type="submit" class="btn">Submit</button>
+    {{ form.none_field_errors }}
+    {{ form.errors }}
+</form>
+<h1>HELLO</h1>
+{% endif %}
+{% endblock %}

@@ -20,7 +20,5 @@ class FavouriteAlbumForm(forms.ModelForm):
     
     def __init__(self, *args, **kwargs):
         super(FavouriteAlbumForm, self).__init__(*args, **kwargs)
-        # Further customization of the form fields can be done here
-        # For example, setting a custom label
         self.fields['favourite_album'].label = "Select Your Favourite Album"
         self.fields['body'].label = "Why is this your favourite album?"
