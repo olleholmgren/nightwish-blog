@@ -10,12 +10,13 @@
 <br>
 <form action=" {% url 'favourite_album' %}" method="POST">
     {% csrf_token %}
-    {{ form.as_p }}
+    {{ form|crispy }}
+    {{ body|crispy }}
+    {{ fav_album.body }}
+    {{ body }}
     <br>
     <br>
     <button type="submit" class="btn">Submit</button>
-    {{ body }}
-    {{ form.content }}
     {{ form.none_field_errors }}
     {{ form.errors }}
 </form>
