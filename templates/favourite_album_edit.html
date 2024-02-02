@@ -5,7 +5,7 @@
 {% load crispy_forms_tags %}
 
 {% if user.is_authenticated %}
-<form action=" {% url 'favourite_album' %}" method="POST">
+<form method="POST">
     {% csrf_token %}
     {{ form|crispy }}
     {{ body|crispy }}
