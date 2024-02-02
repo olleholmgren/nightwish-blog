@@ -54,14 +54,6 @@ class Comment(models.Model):
 
 class FavouriteAlbum(models.Model):
 
-    author = models.ForeignKey(User, default=None, null=True, blank=True, on_delete=models.CASCADE,
-                               related_name='favourite_album')
-    content = models.TextField()
-    status = models.IntegerField(choices=STATUS, default=0)
-    created_on = models.DateTimeField(auto_now_add=True)
-    updated_on = models.DateTimeField(auto_now=True)
-    
-
     class AlbumChoices(models.TextChoices):
 
         ANGELS_FALL_FIRST = ('Angels Fall First')
@@ -74,8 +66,13 @@ class FavouriteAlbum(models.Model):
         ENDLESS_FORMS_MOST_BEAUTIFUL = ('Endless Forms Most Beautiful')
         HUMAN_NATURE = ('Human. :||: Nature.')
 
-    status = models.IntegerField(choices=STATUS, default=1)
+    author = models.ForeignKey(User, default=None, null=True, blank=True, on_delete=models.CASCADE,
+                               related_name='favourite_album')
+    content = models.TextField()
+    body = models.TextField()
+    status = models.IntegerField(choices=STATUS, default=0)
     created_on = models.DateTimeField(auto_now_add=True)
+    updated_on = models.DateTimeField(auto_now=True)
     favourite_album = models.CharField(
         max_length=30,
         choices=AlbumChoices.choices,

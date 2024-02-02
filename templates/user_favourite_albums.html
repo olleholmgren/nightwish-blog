@@ -7,7 +7,11 @@
     {% for fav_album in favourite_albums %}
         <li>
             <strong>User:</strong> {{ fav_album.author.username }} - 
+            <br>
             <strong>Favourite Album:</strong> {{ fav_album.get_favourite_album_display }}
+            <br>
+            <strong>Feeling:</strong> {{ fav_album.body }}
+            <br>
         </li>
     {% empty %}
         <li>No users have selected a favourite album yet.</li>
