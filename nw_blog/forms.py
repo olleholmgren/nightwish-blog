@@ -14,5 +14,13 @@ class FavouriteAlbumForm(forms.ModelForm):
         model = FavouriteAlbum
         fields = ('favourite_album', 'body')
         widgets = {
-            'favourite_album': forms.Select()
+            'favourite_album': forms.Select(),
+            'body': forms.Textarea(attrs={'class': 'form-control', 'rows': 3}),
         }
+    
+    def __init__(self, *args, **kwargs):
+        super(FavouriteAlbumForm, self).__init__(*args, **kwargs)
+        # Further customization of the form fields can be done here
+        # For example, setting a custom label
+        self.fields['favourite_album'].label = "Select Your Favourite Album"
+        self.fields['body'].label = "Why is this your favourite album?"

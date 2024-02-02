@@ -13,6 +13,10 @@
             <br>
             <strong>Feeling:</strong> {{ fav_album.body }}
             <br>
+            {% if user.is_authenticated and fav_album.author == user %}
+            <a href="{% url 'favouritealbum_edit' fav_album.id %}" class="btn btn-primary">Edit</a>
+            <a href="{% url 'favouritealbum_delete' fav_album.id %}" class="btn btn-danger" onclick="return confirm('Are you sure you want to delete this album?');">Delete</a>
+            {% endif %}
         </div>
     {% empty %}
         <li>No users have selected a favourite album yet.</li>
@@ -20,3 +24,5 @@
 </ul>
 
 {% endblock content %}
+
+
