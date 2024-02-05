@@ -209,3 +209,16 @@ I made this Use Case Diagram mostly in order to get the broader picture of what 
 - Chrome Developer Tools: Utilized for inspecting page elements, debugging and troubleshooting.The Lighthouse extension installed in the Chrome Browser was used to generate the performance report.
 - Google Fonts
 - Font Awesome
+
+# Deployment
+
+# Credits
+
+Inspiration regarding Manual testing and ReadMe structure are taken from my fellow school mate Marcus Eriksson with his project portfolio work "Review | Alliance":
+* [Review | Alliance by Marcus Eriksson](https://github.com/worldofmarcus/project-portfolio-4/)
+
+Credits of course goes to my favourite mentor Spencer Barriball as he (with patience) gave me a huge amount of help throughout this entire project
+
+# Acknowledgements
+
+A huge THANK YOU to my excellent mentor, the wizard of programming: Spencer Barriball at Code Institute.
