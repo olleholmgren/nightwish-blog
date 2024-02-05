@@ -33,7 +33,7 @@ DEBUG = True
 
 X_FRAME_OPTIONS = 'ORIGIN'
 
-ALLOWED_HOSTS = ['8000-olleholmgre-nightwishbl-9fwqgr49dpd.ws-eu107.gitpod.io', 'nightwish-blog.herokuapp.com', 'localhost']
+ALLOWED_HOSTS = ['8000-olleholmgre-nightwishbl-9fwqgr49dpd.ws-eu108.gitpod.io', '8000-olleholmgre-nightwishbl-9fwqgr49dpd.ws-eu107.gitpod.io', 'nightwish-blog.herokuapp.com', 'localhost']
 
 
 # Application definition
@@ -66,7 +66,7 @@ LOGOUT_REDIRECT_URL = '/'
 
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
-CSRF_TRUSTED_ORIGINS = ['https://8000-olleholmgre-nightwishbl-9fwqgr49dpd.ws-eu107.gitpod.io']
+CSRF_TRUSTED_ORIGINS = ['https://8000-olleholmgre-nightwishbl-9fwqgr49dpd.ws-eu108.gitpod.io', 'https://8000-olleholmgre-nightwishbl-9fwqgr49dpd.ws-eu107.gitpod.io']
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
