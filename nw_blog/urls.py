@@ -11,5 +11,7 @@ urlpatterns = [
     path('<slug:slug>/', views.post_view, name='post_view'),
     path('like/<slug:slug>', views.post_like, name='post_like'),
     path('delete_favourite_album/<int:favouritealbum_id>/', views.FavouriteAlbum_delete, name='favouritealbum_delete'),
-    path('edit_favourite_album/<int:favouritealbum_id>/', views.FavouriteAlbum_edit, name='favouritealbum_edit')
+    path('edit_favourite_album/<int:favouritealbum_id>/', views.FavouriteAlbum_edit, name='favouritealbum_edit'),
+    path('favourite_album_edited/', views.FavouriteAlbumEdited.as_view(), name='favourite_album_edited'),
+    path('favourite_album_deleted/', views.FavouriteAlbumDeleted.as_view(), name='favourite_album_deleted')
 ]
