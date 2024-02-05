@@ -166,6 +166,28 @@ I made this Use Case Diagram mostly in order to get the broader picture of what 
 
 ## Entity Relationship Diagram
 
+# Testing
+
+### Manual testing throughout the entire website
+
+| Status | ***Website (NIGHTWISH PLATFORM) - User not logged in**
+|:-------:|:--------|
+| &check; | 
+| &check; | Pasting page that needs authentication loads a forbidden page
+| &check; | Clicking the website name in nav bar loads the home page
+| &check; | Clicking the Home button on the nav bar loads the home page
+| &check; | 
+| &check; | Clicking the Albums button on the nav bar lists all album reviews
+| &check; | Clicking the Concert button on the nav bar lists all concert reviews
+| &check; | Clicking the Log In / Sign Up loads the sign up page
+| &check; | 6 Reviews are rendered for the user on all / albums / concert page before pagination kicks in
+| &check; | Clicking the Read More button on the a review card loads the review detail page
+| &check; | In the details view the user cannot create a comment
+| &check; | Clicking the Instagram link in the footer area opens Instagram in a new window
+| &check; | Clicking the YouTube link in the footer area opens YouTube in a new window
+| &check; | Clicking the LinkedInlink in the footer area opens LinkedIN in a new window
+| &check; | Clicking the Twitter link in the footer area opens Twitter in a new window
+
 
 ## Languages and technologies
 - HTML: Used for structuring all the templates on the site.
