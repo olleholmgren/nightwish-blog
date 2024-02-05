@@ -36,12 +36,13 @@ class FavouriteAlbumView(generic.CreateView):
         messages.add_message(self.request, messages.SUCCESS, 'Your favourite album has been saved')
         return response
 
+
 @login_required
 def FavouriteAlbum_delete(request, favouritealbum_id):
     album = get_object_or_404(FavouriteAlbum, id=favouritealbum_id, author=request.user)
     album.delete()
     messages.success(request, 'Your favorite album has been deleted.')
-    return redirect('album_list')
+    return redirect('favourite_album_deleted')
 
 @login_required
 def FavouriteAlbum_edit(request, favouritealbum_id):
@@ -51,7 +52,7 @@ def FavouriteAlbum_edit(request, favouritealbum_id):
         if form.is_valid():
             form.save()
             messages.success(request, 'Your favorite album has been updated.')
-            return redirect('album_list')
+            return redirect('favourite_album_edited')
     else:
         form = FavouriteAlbumForm(instance=album)
     return render(request, 'favourite_album_edit.html', {'form': form})
@@ -82,6 +83,18 @@ class AlbumListView(generic.ListView):
     def post(self, request, *args, **kwargs):
         self.object_list = self.get_queryset()
         return self.render_to_response(self.get_context_data())
+
+
+class FavouriteAlbumEdited(generic.ListView):
+
+    model = FavouriteAlbum
+    template_name = 'favourite_album_edited.html'
+
+
+class FavouriteAlbumDeleted(generic.ListView):
+
+    model = FavouriteAlbum
+    template_name = 'favourite_album_deleted.html'
 
 
 class UserFavouriteAlbumListView(generic.ListView):
