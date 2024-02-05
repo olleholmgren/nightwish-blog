@@ -90,6 +90,10 @@ class FavouriteAlbumEdited(generic.ListView):
     model = FavouriteAlbum
     template_name = 'favourite_album_edited.html'
 
+    def post(self, request, *args, **kwargs):
+        self.object_list = self.get_queryset()
+        return self.render_to_response(self.get_context_data())
+
 
 class FavouriteAlbumDeleted(generic.ListView):
 
@@ -102,11 +106,7 @@ class UserFavouriteAlbumListView(generic.ListView):
     model = FavouriteAlbum
     template_name = 'user_favourite_albums.html'
     context_object_name = 'favourite_albums'
-
-    def get_queryset(self):
-        
-        return FavouriteAlbum.objects.exclude(author=None).select_related('author').order_by('author')
-
+    
 
 def post_view(request, slug, *args, **kwargs):
    
