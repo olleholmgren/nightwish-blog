@@ -6,7 +6,6 @@
 <h3>Choose your favourite Album</h3>
 <br>
 <p><strong>Posting as: {{ user.username }}</strong></p>
-<br>
 <form action=" {% url 'favourite_album' %}" method="POST">
     {% csrf_token %}
     {{ form|crispy }}

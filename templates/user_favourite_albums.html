@@ -2,10 +2,20 @@
 
 {% block content %}
 
-<h2>Users and Their Favourite Albums</h2>
+<h1>the favourite album list</h1>
+<h3>Welcome to pick out and share your thought about your favourite album
+</h3>
+<br>
+<div>
+    <a href="{% url 'favourite_album' %}">
+        <button class="btn">Pick your favourite album</button>
+    </a>
+</div>
+<br>
+<br>
 <ul>
     {% for fav_album in favourite_albums %}
-    <div class="centered-content">
+    <div class="block-content">
         <div class="album-card">
             <br>
             <strong>User:</strong> {{ fav_album.author.username }}
@@ -13,6 +23,7 @@
             <strong>Favourite Album:</strong> {{ fav_album.get_favourite_album_display }}
             <br>
             <strong>Feeling:</strong> {{ fav_album.body }}
+            <br>
             <br>
             {% if user.is_authenticated and fav_album.author == user %}
             <a href="{% url 'favouritealbum_edit' fav_album.id %}" class="btn btn-primary">Edit</a>
