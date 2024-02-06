@@ -3,23 +3,22 @@
 {% block content %}
 {% load crispy_forms_tags %}
 {% if user.is_authenticated %}
-<h3>Pick your favourite album</h3>
-<h3>Share your thoughts with us</h3>
+<h2>Pick your favourite album</h2>
+<h4>- Share your thoughts with us -</h4>
 <br>
-
-<form action=" {% url 'favourite_album' %}" method="POST">
+<div>
+    <form action=" {% url 'favourite_album' %}" method="POST">
     {% csrf_token %}
     <br>
     {{ form|crispy }}
     <br>
-    
     <p><strong>Posting as: {{ user.username }}</strong></p>
     <br>
     <button type="submit" class="btn">Submit</button>
     {{ form.none_field_errors }}
     {{ form.errors }}
-</form>
-
+    </form>
+</div>
 
 {% else %}
 <div>
