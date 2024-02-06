@@ -8,7 +8,6 @@ An online interactive fanzine for dedicated fans of the great symphonic metal ba
 
 * [**Purpose**](<#purpose>)
 * [**Existing Features**](<#existing-features>)
-* [****](<#>)
 * [**Project Journey**](<#project-journey>)
 * [**UI/UX**](<#uiux>)
 * [**Agile**](<#agile>)
@@ -491,7 +490,7 @@ The live link to the 'Review | Alliance' site on Heroku an be found [here](https
 
 [Back to top](<#table-of-content>)
 # Credits
-Inspiration regarding ReadMe structure and the ReadMe sections manual testing and deployment are taken from my fellow school mate Marcus Eriksson with his project portfolio work "Review | Alliance".
+Inspiration regarding structure with table of contents and the ReadMe sections manual testing and deployment are taken from my fellow school mate Marcus Eriksson with his project portfolio work "Review | Alliance".
 
 You can find his project here:
 * [Review | Alliance by Marcus Eriksson](https://github.com/worldofmarcus/project-portfolio-4/)
