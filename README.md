@@ -1,20 +1,33 @@
-# THE NIGHTWISH PLATFORM #
+# **NIGHTWISH Platform**
 
 ![MOCKUP](/static/images/mockup.png)
 
 An online interactive fanzine for dedicated fans of the great symphonic metal band
 
-## Purpose
+# Table of Content
+
+* [**Purpose**](<#purpose>)
+* [**Existing Features**](<#existing-features>)
+* [****](<#>)
+* [**Project Journey**](<#project-journey>)
+* [**UI/UX**](<#uiux>)
+* [**Agile**](<#agile>)
+* [**Future Features**](<#future-features>)
+* [**Testing**](<#testing>)
+* [**Deployment**](<#deployment>)
+* [**Credits**](<#credits>)
+* [**Acknowledgements**](<#acknowledgements>)
+
+# Purpose
 The aim for this project is to create a PLATFORM for NIGHTWISH fans to gather and share thoughts and opinions as well as exchange experiences with each other about NIGHTWISH.
 
 ### Goal
 As an owner, my goal is to be able to run and maintain a PLATFORM that will use the CRUD(Create, Read, Update, Delete) functionality in order to serve dedicated fans of NIGHTWISH. The user will have the choice of either sign up as a Member to the PLATFORM or to just remain a Guest
 This means that the user will be able to: 
 
-## Existing Features
-
+[Back to top](<#table-of-content>)
+# Existing Features
 ### Guest, Member and Admin
-
 #### Guest(User)
 If the user does not sign up to the PLATFORM they will remain a Guest.
 The Guests of the PLATFORM will enjoy the following features:
@@ -41,13 +54,13 @@ The Members of the PLATFORM will enjoy the following features(new features not p
 - ***Update (all) posts***
 - ***Delete (all) posts***
 
-## Project Journey
-
+[Back to top](<#table-of-content>)
+# Project Journey
+## Diagrams and wireframe
 While staring up my blog project, I wanted to have a clear overview of what features and functions I need my PLATFORM in order to have a fully functional PLATFORM.	
-After discussing with my fellow classmates at Code Institute it came to my understanding that it is a very good idea to start with a sketch or flowchart. So I started to create the Use Case Diagram as visible below:	
+After discussing with my fellow classmates at Code Institute it came to my understanding that it is a very good idea to start with a sketch or flowchart. So I started to create the Use Case Diagram as visible below:
 
 ## Use Case Diagram
-
 I made this Use Case Diagram mostly in order to get the broader picture of what the actual product will have in terms of features for the:
 - Admin
 - Member
@@ -56,18 +69,19 @@ I made this Use Case Diagram mostly in order to get the broader picture of what 
 ![UCD](https://github.com/olleholmgren/nightwish-blog/assets/114229598/f24f5b27-b4c4-44ea-a8a4-75b32bafc31a)
 
 ## Entity Relationship Diagram
-
 For this ERD I used [Lucid Chart](https://www.lucidchart.com/) in order to structure up my database schema.
 
 ![ERD](https://github.com/olleholmgren/nightwish-blog/assets/114229598/6b0f5ca1-b78a-4f5f-afdf-377fdc9823a7)
 
 ## Wireframe
 
+???????????????????????????????????????????????????????????????????????????????
+
+[Back to top](<#table-of-content>)
 # UI/UX
 I wanted to build a clean and neat blog/forum which is very easy to use. There are no surprises or misguiding attributes. The main focus is to meet the user's expectations of what a blog should look like.
 
 ## The 5 'S' Planes of User Experience(UX)
-
 ### Strategy
 Focuses on fulfilling user needs and product objectives. In this particular project, the emphasis was on deviating from the common functionalities found on other websites, such as social media interactions, discussions, and excessive visual content. The primary goal was to create a serene and creative space. The content available for browsing was deliberately kept at a simplistic level.
 
@@ -84,7 +98,8 @@ Translates the features outlined in the structure into navigational elements. Fo
 ### Surface
 Addresses visual design and the means of conveying desired emotions and achieving desired effects.
 
-## Agile
+[Back to top](<#table-of-content>)
+# Agile
 In software and web development, it is very useful to adapt the Agile mindset when working on or starting up a project. 
 For this project, I have imagined and made up an imaginary group of people and they are called Users. 
 I sort these Users in three different categories: Guests, Members and Admin.
@@ -97,15 +112,12 @@ I order to approach this project in a Design Thinkng way, I have put myself in t
 For the User Story part, I have referred to the very reliable source of Niel McEwens Common Agile Practices content from Code Institute.
 
 ### User Stories
-
 #### Guest
-
 - As a Guest, I want to be able to read posts without signing up for the PLATFORM in order to save time and energy.
 - As a Guest, I want to be able to search for posts in order to find content that interests me.
 - As a Guest, I want to be able to sign up to the PLATFORM in order to enjoy all features of a Member.
 
 #### Member
-
 - As a Member, I want to be able to Create posts so that I can share my thoughts and feelings to the world.
 - As a Member, I want to be able to Read posts in order to be able to gain information about other peoples thoughts and feelings.
 - As a Member, I want to be able to Update posts so that I can add any additional content of my choice.
@@ -115,12 +127,9 @@ For the User Story part, I have referred to the very reliable source of Niel McE
 #### Admin
 - As an Admin, I want to be able to verify the posts before they are visible at the PLATFORM, in order to avoid for example foul or abusive language or even harassment.
 
-
-
-## Future Features
-
+[Back to top](<#table-of-content>)
+# Future Features
 ### Guest, Member and Admin
-
 #### Guest(User)
 If the user does not sign up to the PLATFORM they will remain a Guest.
 The Guests of the PLATFORM will enjoy the following features:
@@ -151,23 +160,8 @@ The Members of the PLATFORM will enjoy the following features(new features not p
 - ***Update (all) posts***
 - ***Delete (all) posts***
 
-## Project Journey
-
-While staring up my blog project, I wanted to have a clear overview of what features and functions I need my PLATFORM in order to have a fully functional PLATFORM.	
-After discussing with my fellow classmates at Code Institute it came to my understanding that it is a very good idea to start with a sketch or flowchart. So I started to create the Use Case Diagram as visible below:	
-
-## Use Case Diagram
-
-I made this Use Case Diagram mostly in order to get the broader picture of what the actual product will have in terms of features for the:
-- Admin
-- Member
-- Guest
-
-
-## Entity Relationship Diagram
-
+[Back to top](<#table-of-content>)
 # Testing
-
 ## Manual testing throughout the entire website
 
 | Status | ***Website (NIGHTWISH PLATFORM) - User not logged in**
@@ -234,7 +228,6 @@ No errors were returned when passing through JSHint (script.js) but the test rep
 ![JSHint Validation](readme/assets/images/js_hint_validation.png)
 </details><br/>
 
-
 ## Languages and technologies
 - HTML: Used for structuring all the templates on the site.
 - CSS: Utilized to provide additional styling to the site.
@@ -256,10 +249,9 @@ No errors were returned when passing through JSHint (script.js) but the test rep
 - Google Fonts
 - Font Awesome
 
+[Back to top](<#table-of-content>)
 # Deployment
-
 ## Deployment To Heroku
-
 The project was deployed to [Heroku](https://www.heroku.com). To deploy, please follow the process below:
 
 1. To begin with we need to create a GitHub repository from the [Code Institute template](https://github.com/Code-Institute-Org/gitpod-full-template) by following the link and then click 'Use this template'.
@@ -498,10 +490,7 @@ Now, add the link to the DATABASE_URL that we added to the environment file earl
 The live link to the 'Review | Alliance' site on Heroku an be found [here](https://project-portfolio-4.herokuapp.com/). And the Github repository can be found [here](https://github.com/worldofmarcus/project-portfolio-4).
 
 [Back to top](<#table-of-content>)
-
-
 # Credits
-
 Inspiration regarding ReadMe structure and the ReadMe sections manual testing and deployment are taken from my fellow school mate Marcus Eriksson with his project portfolio work "Review | Alliance".
 
 You can find his project here:
@@ -509,6 +498,6 @@ You can find his project here:
 
 Credits of course goes to my favourite mentor Spencer Barriball as he (with patience) gave me a huge amount of help throughout this entire project
 
+[Back to top](<#table-of-content>)
 # Acknowledgements
-
 A huge THANK YOU to my excellent mentor, the wizard of programming: Spencer Barriball at Code Institute.
