@@ -164,7 +164,7 @@ The Members of the PLATFORM will enjoy the following features(new features not p
 # Testing
 ## Manual testing throughout the entire website
 
-| Status | ***Website (NIGHTWISH PLATFORM) - User not logged in**
+| Status | **Website (NIGHTWISH PLATFORM) - User not logged in**
 
 index.html & base.html
 |:-------:|:--------|
@@ -200,6 +200,13 @@ accounts/login.html
 | &check; | Clicking the body 'sign up' link loads the 'Sign up' page
 | &check; | Clicking the form 'LOG IN' button (without completing form correctly) shows error message
 | &check; | Clicking the form 'LOG IN' button (having completed form correctly) logs in user, renders HOME page with welcome message, greeting the user by name(how polite!)
+
+
+| Status | **Main Website - User Logged In**
+|:-------:|:--------|
+| &check; | Typing in a incorrect URL on the page loads the 404 error page
+
+
 
 ## Code Validation
 ### Python
