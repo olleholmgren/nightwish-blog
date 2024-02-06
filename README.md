@@ -196,7 +196,7 @@ The Python code on the 'NIGHTWISH Platform' site has been tested and validated t
 
 ### HTML
 The HTML code on the 'NIGHTWISH Platform' site has been tested through W3C Markup Validation Service.
-10 errors that were quickly fixed by myself.
+The 10 problems and errors shown on the first image were later fixed by myself. The result is shown in the second image.
 
 ![HTML Result Error](/static/images/html_validation_error.png)
 
