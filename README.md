@@ -180,41 +180,26 @@ index.html & base.html
 | &check; | Clicking the footer 'f'-icon link redirects to facebook.com
 | &check; | Clicking the footer Instagram icon link redirects to instagram.com
 
-favourite_album.html
+favourite_album.html('Pick your album')
 |:-------:|:--------|
-| &check; | 
-| &check; | 
-| &check; | 
-| &check; | 
-| &check; | 
+| &check; | Clicking the body 'SIGN UP' link loads the 'Sign up' page
+| &check; | Clicking the body 'LOG IN' link loads the 'Log in' page
 
 user_favourite_albums.html
 |:-------:|:--------|
-| &check; | 
-| &check; | 
-| &check; | 
-| &check; | 
-| &check; | 
+| &check; | Clicking the body 'PICK YOUR FAVOURITE ALBUM(favourite_album.html)' button loads blank page with instructions how to sign up/log in
+
 accounts/signup.html
 |:-------:|:--------|
-| &check; | 
-| &check; | 
-| &check; | 
-| &check; | 
-| &check; | 
+| &check; | Clicking the body 'sign in' link loads the 'Log in' page
+| &check; | Clicking the form 'SIGN UP' button (without completing form correctly) shows error message
+| &check; | Clicking the form 'SIGN UP' button (having completed form correctly) creates account, renders HOME page with welcome message, greeting new user by name(how polite.)
 
 accounts/login.html
 |:-------:|:--------|
-| &check; | 
-| &check; | 
-| &check; | 
-| &check; | 
-| &check; | 
-
-
-
-
-
+| &check; | Clicking the body 'sign up' link loads the 'Sign up' page
+| &check; | Clicking the form 'LOG IN' button (without completing form correctly) shows error message
+| &check; | Clicking the form 'LOG IN' button (having completed form correctly) logs in user, renders HOME page with welcome message, greeting the user by name(how polite!)
 
 ## Code Validation
 ### Python
