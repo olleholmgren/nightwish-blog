@@ -168,7 +168,7 @@ I made this Use Case Diagram mostly in order to get the broader picture of what 
 
 # Testing
 
-### Manual testing throughout the entire website
+## Manual testing throughout the entire website
 
 | Status | ***Website (NIGHTWISH PLATFORM) - User not logged in**
 |:-------:|:--------|
@@ -188,6 +188,51 @@ I made this Use Case Diagram mostly in order to get the broader picture of what 
 | &check; | 
 | &check; | 
 | &check; | 
+
+## Code Validation
+The code on the 'NIGHTWISH Platform' site has been tested through W3C Markup Validation Service, W3C CSS Validation Service and JSHint.
+
+### Markup Validation
+After fixing the inital errors that W3C Markup Validation Service reported, no errors were returned.
+
+<details><summary><b>HTML Validation Result</b></summary>
+
+![HTML Result Home Page](readme/assets/images/html_validation_no_error.png)
+</details><br/>
+
+[Back to top](<#table-of-content>)
+
+### CSS Validaton
+When validating my own code the W3C CSS Validator reports no errors.
+
+<details><summary><b>CSS Validation Result</b></summary>
+
+![CSS Result](readme/assets/images/css_validation_no_error.png)
+</details><br/>
+
+[Back to top](<#table-of-content>)
+
+### PEP Validation
+At the time of this project the website [pep8online](http://pep8online.com/) is currently offline. Usually I'm using that site to validate my Python code. Due to the site being offline I have followed Code Institutes workaround to add the PEP8 validator 'pycodestyle' to the Gitpod Workspace. I have tested the following Python files:
+
+* admin.py - No errors or warnings reported
+* forms.py - No errors or warnings reported
+* models.py - No errors or warnings reported
+* test_forms.py - No errors or warnings reported
+* urls.py - No errors or warnings reported
+* views.py - No errors or warnings reported
+
+[Back to top](<#table-of-content>)
+
+### JavaScript Validation
+The JSHint validator results can be seen below:
+
+No errors were returned when passing through JSHint (script.js) but the test reported one undefined variable connected to Bootstrap which is no problem.
+
+<details><summary><b>JSHint Validation Result</b></summary>
+
+![JSHint Validation](readme/assets/images/js_hint_validation.png)
+</details><br/>
 
 
 ## Languages and technologies
