@@ -172,21 +172,22 @@ I made this Use Case Diagram mostly in order to get the broader picture of what 
 
 | Status | ***Website (NIGHTWISH PLATFORM) - User not logged in**
 |:-------:|:--------|
-| &check; | 
-| &check; | Pasting page that needs authentication loads a forbidden page
 | &check; | Clicking the website name in nav bar loads the home page
-| &check; | Clicking the Home button on the nav bar loads the home page
+| &check; | Clicking the nav-bar 'Home' button loads the home page
+| &check; | Clicking the nav-bar 'Pick your album' button loads blank page with instructions how to sign up/log in
+| &check; | Clicking the nav-bar 'List of Albums' button loads the page with users favourite albums
+| &check; | Clicking the nav-bar 'Sign Up' button loads the 'Sign up' page
+| &check; | Clicking the nav-bar 'Log in' button loads the 'Log in' page
 | &check; | 
-| &check; | Clicking the Albums button on the nav bar lists all album reviews
-| &check; | Clicking the Concert button on the nav bar lists all concert reviews
-| &check; | Clicking the Log In / Sign Up loads the sign up page
-| &check; | 6 Reviews are rendered for the user on all / albums / concert page before pagination kicks in
-| &check; | Clicking the Read More button on the a review card loads the review detail page
-| &check; | In the details view the user cannot create a comment
-| &check; | Clicking the Instagram link in the footer area opens Instagram in a new window
-| &check; | Clicking the YouTube link in the footer area opens YouTube in a new window
-| &check; | Clicking the LinkedInlink in the footer area opens LinkedIN in a new window
-| &check; | Clicking the Twitter link in the footer area opens Twitter in a new window
+| &check; | 
+| &check; | 
+| &check; | 
+| &check; | 
+| &check; | 
+| &check; | 
+| &check; | 
+| &check; | 
+| &check; | 
 
 
 ## Languages and technologies
