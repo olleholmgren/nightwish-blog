@@ -184,6 +184,7 @@ The Members of the PLATFORM will enjoy the following features(new features not p
 | &check; | 
 
 ## Code Validation
+### Python
 The Python code on the 'NIGHTWISH Platform' site has been tested and validated through the fantastic Python Linter at https://pep8ci.herokuapp.com/ by Code Institute.
 
 * admin.py - 
@@ -193,20 +194,27 @@ The Python code on the 'NIGHTWISH Platform' site has been tested and validated t
 * urls.py - 
 * views.py - 
 
+### HTML
 The HTML code on the 'NIGHTWISH Platform' site has been tested through W3C Markup Validation Service.
-10 errors that were quickly fixed by myself. 
-![HTML Result Error](/static/images/html_validation_error.png)
-![HTML Result No](readme/assets/images/html_validation_no_error.png)
+10 errors that were quickly fixed by myself.
 
-W3C CSS Validation Service
+![HTML Result Error](/static/images/html_validation_error.png)
+
+![HTML Result No Error](/static/images/html_validation_no_error.png)
+
+### CSS
 The CSS code on the 'NIGHTWISH Platform' site has been tested manually by inputting my css file in the W3C CSS Jigsaw Validator.
 No errors reported.
-![CSS Result](readme/assets/images/css_validation_no_error.png)
 
-JSHint
+![CSS Result](/static/images/css_validation_no_error.png)
+
+![CSS Result 2](/static/images/css_validation_no_error2.png)
+
+### JavaScript
 The JavaScript code on the 'NIGHTWISH Platform' site has been tested in JSHint.com.
 No errors were returned but the test reported one undefined variable connected to Bootstrap which is fine.
-![JSHint Validation](readme/assets/images/js_hint_validation.png)
+
+![JSHint Validation](/static/images/js_hint_validation.png)
 
 [Back to top](<#table-of-content>)
 
