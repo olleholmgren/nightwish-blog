@@ -25,10 +25,10 @@
                 <div class="block-content center">                
                         {% if user.is_authenticated %}
                         <br><br><br><br><br><br>
-                        <a href="{% url 'favourite_album' %}"><button class="btn">Pick your favourite album</button></a>
+                        <a href="{% url 'favourite_album' %}" class="btn">Pick your favourite album</a>
                         {% else %}
                         <br><br><br>
-                        <a href="{% url 'account_signup' %}"><button class="btn">Sign up to become a member</button></a>
+                        <a href="{% url 'account_signup' %}" class="btn">Sign up to become a member</a>
                         {% endif %}
                 </div>
             </div>
