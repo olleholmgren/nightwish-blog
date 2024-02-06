@@ -165,23 +165,56 @@ The Members of the PLATFORM will enjoy the following features(new features not p
 ## Manual testing throughout the entire website
 
 | Status | ***Website (NIGHTWISH PLATFORM) - User not logged in**
+
+index.html & base.html
 |:-------:|:--------|
 | &check; | Clicking the website name in nav bar loads the home page
-| &check; | Clicking the nav-bar 'Home' button loads the home page
-| &check; | Clicking the nav-bar 'Pick your album' button loads blank page with instructions how to sign up/log in
-| &check; | Clicking the nav-bar 'List of Albums' button loads the page with users favourite albums
+| &check; | Clicking the nav-bar 'HOME' button loads the home page
+| &check; | Clicking the nav-bar 'Pick your album(favourite_album.html)' button loads blank page with instructions how to sign up/log in
+| &check; | Clicking the nav-bar 'List of albums' button loads the page with users favourite albums
 | &check; | Clicking the nav-bar 'Sign Up' button loads the 'Sign up' page
 | &check; | Clicking the nav-bar 'Log in' button loads the 'Log in' page
+| &check; | Clicking the body 'Log in' link loads the 'Log in' page
+| &check; | Clicking the body 'SIGN UP TO BECOME A MEMBER' button loads the 'Sign up' page
+| &check; | Clicking the footer 'X'-icon link redirects to X.com
+| &check; | Clicking the footer 'f'-icon link redirects to facebook.com
+| &check; | Clicking the footer Instagram icon link redirects to instagram.com
+
+favourite_album.html
+|:-------:|:--------|
 | &check; | 
 | &check; | 
 | &check; | 
 | &check; | 
 | &check; | 
+
+user_favourite_albums.html
+|:-------:|:--------|
 | &check; | 
 | &check; | 
 | &check; | 
 | &check; | 
 | &check; | 
+accounts/signup.html
+|:-------:|:--------|
+| &check; | 
+| &check; | 
+| &check; | 
+| &check; | 
+| &check; | 
+
+accounts/login.html
+|:-------:|:--------|
+| &check; | 
+| &check; | 
+| &check; | 
+| &check; | 
+| &check; | 
+
+
+
+
+
 
 ## Code Validation
 ### Python
