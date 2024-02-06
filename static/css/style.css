@@ -34,21 +34,7 @@ body {
     justify-content: center;
     align-items: center;
   }
-
-.album-card {
-  text-align: right;
-  width: auto;
-  background-color: rgb(7, 6, 45);
-  box-shadow: 0 4px 8px 0 rgba(236, 7, 7, 0.2);
-  transition: 0.3s;
-  border-radius: 5px; /* 5px rounded corners */
-}
-
-/* Add rounded corners to the top left and the top right corner of the image */
-img {
-  border-radius: 5px 5px 0 0;
-}
-
+  
 .blog-image img{
   height: auto;
   width: 100%;
