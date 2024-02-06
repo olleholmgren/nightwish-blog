@@ -20,5 +20,5 @@ class FavouriteAlbumForm(forms.ModelForm):
     
     def __init__(self, *args, **kwargs):
         super(FavouriteAlbumForm, self).__init__(*args, **kwargs)
-        self.fields['favourite_album'].label = "Select Your Favourite Album"
+        self.fields['favourite_album'].label = "Please select an album from this list"
         self.fields['body'].label = "Why is this your favourite album?"
