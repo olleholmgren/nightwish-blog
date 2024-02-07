@@ -16,17 +16,21 @@
     <div>
         <div>
             <br>
+            <br>
+            <hr>
+            <hr>
             <strong>User:</strong> {{ fav_album.author.username }}
             <br>
             <strong>Favourite Album:</strong> {{ fav_album.get_favourite_album_display }}
             <br>
             <strong>Feeling:</strong> {{ fav_album.body }}
             <br>
-            <br>
             {% if user.is_authenticated and fav_album.author == user %}
-            <a href="{% url 'favouritealbum_edit' fav_album.id %}" class="btn btn-primary">Edit</a>
-            <a href="{% url 'favouritealbum_delete' fav_album.id %}" class="btn btn-danger" onclick="return confirm('Are you sure you want to delete this album?');">Delete</a>
+            <a href="{% url 'favouritealbum_edit' fav_album.id %}" class="btn">Edit</a>
+            <a href="{% url 'favouritealbum_delete' fav_album.id %}" class="btn btn-delete" onclick="return confirm('Are you sure you want to delete this album?');">Delete</a>
             {% endif %}
+            <hr>
+            <hr>
         </div>
     </div>
     {% empty %}
