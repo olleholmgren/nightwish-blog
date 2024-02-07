@@ -14,5 +14,4 @@ urlpatterns = [
     path('like/<slug:slug>', views.post_like, name='post_like'),
     path('delete_favourite_album/<int:favouritealbum_id>/', views.FavouriteAlbum_delete, name='favouritealbum_delete'),
     path('edit_favourite_album/<int:favouritealbum_id>/', views.FavouriteAlbum_edit, name='favouritealbum_edit'),
-    
 ]
