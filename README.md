@@ -165,10 +165,11 @@ The Members of the PLATFORM will enjoy the following features(new features not p
 # Testing
 ## Manual testing throughout the entire website
 
-| Status | **Website (NIGHTWISH PLATFORM) - User not logged in**
 
-index.html & base.html
+
+| Status | **Website (NIGHTWISH PLATFORM) - User not logged in**
 |:-------:|:--------|
+|index.html & base.html|
 | &check; | Clicking the website name in nav bar loads the home page
 | &check; | Clicking the nav-bar 'HOME' button loads the home page
 | &check; | Clicking the nav-bar 'Pick your album(favourite_album.html)' button loads blank page with instructions how to sign up/log in
@@ -180,34 +181,39 @@ index.html & base.html
 | &check; | Clicking the footer 'X'-icon link redirects to X.com
 | &check; | Clicking the footer 'f'-icon link redirects to facebook.com
 | &check; | Clicking the footer Instagram icon link redirects to instagram.com
-
-favourite_album.html('Pick your album')
-|:-------:|:--------|
+|favourite_album.html('Pick your album')|
 | &check; | Clicking the body 'SIGN UP' link loads the 'Sign up' page
 | &check; | Clicking the body 'LOG IN' link loads the 'Log in' page
-
-user_favourite_albums.html
-|:-------:|:--------|
+|user_favourite_albums.html|
 | &check; | Clicking the body 'PICK YOUR FAVOURITE ALBUM(favourite_album.html)' button loads blank page with instructions how to sign up/log in
-
-accounts/signup.html
-|:-------:|:--------|
+|accounts/signup.html|
 | &check; | Clicking the body 'sign in' link loads the 'Log in' page
 | &check; | Clicking the form 'SIGN UP' button (without completing form correctly) shows error message
 | &check; | Clicking the form 'SIGN UP' button (having completed form correctly) creates account, renders HOME page with welcome message, greeting new user by name(how polite.)
-
-accounts/login.html
-|:-------:|:--------|
+|accounts/login.html|
 | &check; | Clicking the body 'sign up' link loads the 'Sign up' page
 | &check; | Clicking the form 'LOG IN' button (without completing form correctly) shows error message
 | &check; | Clicking the form 'LOG IN' button (having completed form correctly) logs in user, renders HOME page with welcome message, greeting the user by name(how polite!)
 
-
-| Status | **Main Website - User Logged In**
+| Status | **Website (NIGHTWISH PLATFORM) - User logged in**
 |:-------:|:--------|
-| &check; | 
-
-
+|index.html & base.html|
+| &check; | Clicking the website name in nav bar loads the home page
+| &check; | Clicking the nav-bar 'HOME' button loads the home page
+| &check; | Clicking the nav-bar 'Pick your album(favourite_album.html)' button loads the user-only restricted 'Pick your favourite album' page with the correct forms
+| &check; | Clicking the nav-bar 'List of albums' button loads the page with users favourite albums (EDIT and DELETE buttons visible if user created post)
+| &check; | Clicking the nav-bar 'Log out' button loads the 'Log out' page
+| &check; | Clicking the body 'PICK YOUR FAVOURITE ALBUM' button loads the 'Favourite Album' page
+| &check; | Clicking the footer 'X'-icon link redirects to X.com
+| &check; | Clicking the footer 'f'-icon link redirects to facebook.com
+| &check; | Clicking the footer Instagram icon link redirects to instagram.com
+|favourite_album.html('Pick your album')|
+| &check; | Clicking the body 'Please select an album from this list' drop-down list works
+| &check; | Clicking the body 'SUBMIT' form button posts album and renders album list page
+|user_favourite_albums.html|
+| &check; | Clicking the body 'PICK YOUR FAVOURITE ALBUM(favourite_album.html)' button loads Favourite album form page
+| &check; | Clicking the body EDIT button renders fav_album form page with current fav_album post to edit. Edit confirmation page is loaded.
+| &check; | Clicking the body DELETE button throws delete confirm message and then confirms deletion
 
 ## Code Validation
 ### Python
