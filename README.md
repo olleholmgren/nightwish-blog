@@ -129,6 +129,12 @@ For the User Story part, I have referred to the very reliable source of Niel McE
 
 [Back to top](<#table-of-content>)
 # Future Features
+
+- Styled 404 page
+
+### Concert Memories
+A blog where concert experiences can be shared by the admin and as well the users.
+
 ### Guest, Member and Admin
 #### Guest(User)
 If the user does not sign up to the PLATFORM they will remain a Guest.
@@ -139,21 +145,16 @@ The Guests of the PLATFORM will enjoy the following features:
 #### Member(User)
 If the user choose to sign up to the PLATFORM they will become a Member.
 The Members of the PLATFORM will enjoy the following features(new features not presented above are written in bold italics):
-- View/read posts
 - Search posts
-- ***Create posts***
 - ***Like posts***
 - ***Comment (all) posts***
-- ***Update (their own) posts***
-- ***Delete (their own) posts***
+
 
 #### Admin (Owner)
 The Admin is the person "at the controls" who runs and maintains the PLATFORM.
 If the Guest or Member grants the permission to run and maintain the PLATFORM they will become an Admin.
 The Members of the PLATFORM will enjoy the following features(new features not presented above are written in bold italics):
-- View/read posts
-- Search posts
-- Create posts
+
 - Like posts
 - Comment posts
 - ***Verify posts***
@@ -222,7 +223,7 @@ The Python code on the 'NIGHTWISH Platform' site has been tested and validated t
 * admin.py - 
 * forms.py - 
 * models.py - 
-* test_forms.py - 
+* forms_test.py - 
 * urls.py - 
 * views.py - 
 
