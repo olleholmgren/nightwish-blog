@@ -62,10 +62,10 @@ After discussing with my fellow classmates at Code Institute it came to my under
 ## Use Case Diagram
 I made this Use Case Diagram mostly in order to get the broader picture of what the actual product will have in terms of features for the:
 - Admin
-- Member
+- User
 - Guest
 
-![UCD](https://github.com/olleholmgren/nightwish-blog/assets/114229598/f24f5b27-b4c4-44ea-a8a4-75b32bafc31a)
+![UCD](/static/images/ucd-fav-album.png)
 
 ## Entity Relationship Diagram
 For this ERD I used [Lucid Chart](https://www.lucidchart.com/) in order to structure up my database schema.
