@@ -69,6 +69,14 @@ I made this Use Case Diagram mostly in order to get the broader picture of what 
 
 ![UCD](/static/images/ucd-fav-album.png)
 
+## Database
+For this Django application, Elephant PostgreSQL served as the relational database management system. The diagram below visually represents the PostgreSQL database's structure, including tables, columns, and relationships.
+Within the data models, the User model, integrated from the Django allauth library, holds fundamental details about authenticated users. It encompasses fields like username, password, and email.
+
+### Entity Relationship Diagram
+
+![ERD](/static/images/erd-fav-album.png)
+
 [Back to top](<#table-of-content>)
 # UI/UX
 I wanted to build a clean and neat blog/forum which is very easy to use. There are no surprises or misguiding attributes. The main focus is to meet the user's expectations of what a blog should look like.
