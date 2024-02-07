@@ -1,6 +1,6 @@
 # **NIGHTWISH Platform**
 
-![MOCKUP](/static/images/mockup.png)
+![MOCKUP](/static/images/mockup-fav-album.png)
 
 An online interactive fanzine for dedicated fans of the great symphonic metal band
 
